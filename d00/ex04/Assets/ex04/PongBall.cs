@@ -12,7 +12,6 @@ public class PongBall : MonoBehaviour
     public static float ballY;
     private int scorePlayer1;
     private int scorePlayer2;
-
     private Vector3 direction;
    
 
