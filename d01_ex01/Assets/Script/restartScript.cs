@@ -16,7 +16,7 @@ public class restartScript : MonoBehaviour
     {
         if (Input.GetKeyDown("r"))
         { //If you press R
-            SceneManager.LoadScene("ex00"); //Load scene called Game
+            SceneManager.LoadScene("ex01"); //Load scene called Game
         }
     }
 }
