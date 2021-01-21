@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerScript_ex01 : MonoBehaviour    
+public class playerScript_ex01 : MonoBehaviour
 {
-    [SerializeField] private    int id;
+    [SerializeField] private int id;
+    public static int flag_red;
+    public static int flag_yellow;
+    public static int flag_blue;
     private int currentPlayer;
     private Vector3 right;
     private Vector3 left;
@@ -15,6 +18,9 @@ public class playerScript_ex01 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        flag_red = 0;
+        flag_yellow = 0;
+        flag_blue = 0;
         currentPlayer = 1;
         right = new Vector3(1, 0, 0);
         left = new Vector3(-1, 0, 0);
@@ -43,7 +49,27 @@ public class playerScript_ex01 : MonoBehaviour
                 gameObject.transform.Translate(left * Time.deltaTime * speed);
             rigidbody2d = gameObject.transform.GetComponent<Rigidbody2D>();
             if (rigidbody2d.velocity == new Vector2(0f, 0f) && Input.GetKeyDown("space"))
-                rigidbody2d.velocity = up * speed; 
+                rigidbody2d.velocity = up * speed;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (currentPlayer == 2 && other.name == "yellow_exit")
+            flag_yellow += 1;
+        if (currentPlayer == 1 && other.name == "red_exit")
+            flag_red += 1;
+        if (currentPlayer == 3 && other.name == "blue_exit")
+            flag_blue += 1;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (currentPlayer == 1 && other.name == "red_exit")
+            flag_red -= 1;
+        if (currentPlayer == 2 && other.name == "yellow_exit")
+            flag_yellow -= 1;
+        if (currentPlayer == 3 && other.name == "blue_exit")
+            flag_blue -= 1;
     }
 }
