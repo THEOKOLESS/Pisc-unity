@@ -19,7 +19,7 @@ public class endScript : MonoBehaviour
     {
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
-        if (playerScript_ex02.flag_blue == 1 && playerScript_ex02.flag_red == 1 && playerScript_ex02.flag_yellow == 1 && flag == 0)
+        if (playerScript_ex03.flag_blue == 1 && playerScript_ex03.flag_red == 1 && playerScript_ex03.flag_yellow == 1 && flag == 0)
         {
             flag = 1;
             if (sceneName == "ex01")
@@ -29,11 +29,9 @@ public class endScript : MonoBehaviour
             else
                 Debug.Log("gg Wp");
         }
-        else if (flag == 1 && (playerScript_ex02.flag_blue != 1 || playerScript_ex02.flag_red != 1 || playerScript_ex02.flag_yellow != 1))
+        else if (flag == 1 && (playerScript_ex03.flag_blue != 1 || playerScript_ex03.flag_red != 1 || playerScript_ex03.flag_yellow != 1))
             flag = 0;
     }
-
-
 
 
 }
