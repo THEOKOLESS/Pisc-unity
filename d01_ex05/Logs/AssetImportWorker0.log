@@ -1,0 +1,49 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/tvitoux/unity/Pisc-unity/d01_ex05
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61610
+Successfully changed project path to: /Users/tvitoux/unity/Pisc-unity/d01_ex05
+/Users/tvitoux/unity/Pisc-unity/d01_ex05
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 121.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/tvitoux/unity/Pisc-unity/d01_ex05/Assets
+GfxDevice: creating device client; threaded=0
+2021-01-24 19:12:12.214 Unity[35085:2145158] iMac preferred device: Intel Iris Pro Graphics (low power)
+2021-01-24 19:12:12.214 Unity[35085:2145158] Metal devices available: 1
+2021-01-24 19:12:12.214 Unity[35085:2145158] 0: Intel Iris Pro Graphics (low power)
+2021-01-24 19:12:12.524 Unity[35085:2145158] Using device Intel Iris Pro Graphics (low power)
+Initializing Metal device caps: Intel Iris Pro Graphics
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56085
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.057234 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 31.57 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  7.772 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.062860 seconds.
