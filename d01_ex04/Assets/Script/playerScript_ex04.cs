@@ -20,11 +20,17 @@ public class playerScript_ex04   : MonoBehaviour
     public static bool blueDoor1;
     public static bool yellowDoor1;
     public static int currentPlayerOnSwitch;
+    public static int playerOnSwitchRedYellow;
+    public static int playerOnSwitch;
 
+    public  static  bool    switchChangePlatformColorRedYellow;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerOnSwitch = 0;
+        playerOnSwitchRedYellow = 0;
+        switchChangePlatformColorRedYellow = false;
         currentPlayerOnSwitch = 0;
         yellowDoor1 = false;
         blueDoor1 = false;
@@ -98,6 +104,15 @@ public class playerScript_ex04   : MonoBehaviour
         {
             currentPlayerOnSwitch = currentPlayer;
         }
+        else if (other.CompareTag("switchChangePlatformColorBlue"))
+        {
+            playerOnSwitch += 1;
+        }
+        else if (other.CompareTag("switchChangePlatformColorRedYellow"))
+        {
+            playerOnSwitchRedYellow += 1;
+            switchChangePlatformColorRedYellow = true;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -140,6 +155,15 @@ public class playerScript_ex04   : MonoBehaviour
         if (other.CompareTag("switchYellow") && currentPlayer == 2)
         {
             yellowDoor1 = false;
+        }
+         else if (other.CompareTag("switchChangePlatformColorBlue"))
+        {
+            playerOnSwitch -= 1;
+        }
+         else if (other.CompareTag("switchChangePlatformColorRedYellow"))
+        {
+            playerOnSwitchRedYellow -= 1;
+            switchChangePlatformColorRedYellow = false;
         }
     }
 }

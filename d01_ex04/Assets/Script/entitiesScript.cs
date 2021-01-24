@@ -20,9 +20,11 @@ public class entitiesScript : MonoBehaviour
     [SerializeField] private GameObject blueDoor2;
     [SerializeField] private GameObject yellowDoor2;
 
-    private Vector3 openRedDoor2;
-    private Vector3 openYellowDoor2;
-    private Vector3 openBlueDoor2;
+     [SerializeField] private GameObject ChangePlatformColor;
+
+
+
+    private Vector3 openDoor;
 
     private Vector3 openWhiteDoor1;
     private Vector3 openRedDoor1;
@@ -31,6 +33,7 @@ public class entitiesScript : MonoBehaviour
 
     void Start()
     {
+        openDoor = new Vector3(0f, -11.95f, 0f);
         sTelepIn1 = _telep1;
     }
 
@@ -86,8 +89,8 @@ public class entitiesScript : MonoBehaviour
         if (playerScript_ex04.currentPlayerOnSwitch == 1)
         {
             facelessSwitch.GetComponent<SpriteRenderer>().color = new Color(0.8392158f, 0.2705882f, 0.2588235f);
-            openRedDoor2 = new Vector3(-10.41f, -11.95f, 0f);
-            if(redDoor2.transform.position.y < openRedDoor2.y)
+        
+            if(redDoor2.transform.position.y < openDoor.y)
             {
                 redDoor2.transform.Translate(1 * Time.deltaTime * 1.1f, 0, 0);
             }
@@ -95,7 +98,7 @@ public class entitiesScript : MonoBehaviour
         if (playerScript_ex04.currentPlayerOnSwitch == 2)
         {
             facelessSwitch.GetComponent<SpriteRenderer>().color = new Color(0.7058824f, 0.6117647f, 0.2196079f);
-            if (yellowDoor2.transform.position.y < openRedDoor2.y)
+            if (yellowDoor2.transform.position.y < openDoor.y)
             {
                yellowDoor2.transform.Translate(1 * Time.deltaTime * 1.1f, 0, 0);
             }
@@ -103,14 +106,33 @@ public class entitiesScript : MonoBehaviour
         if (playerScript_ex04.currentPlayerOnSwitch == 3)
         {
             facelessSwitch.GetComponent<SpriteRenderer>().color = new Color(0.145098f, 0.2392157f, 372549f);
-            openBlueDoor2 = new Vector3(-10.41f, -11.95f, 0f);
-            if (blueDoor2.transform.position.y < openRedDoor2.y)
+            if (blueDoor2.transform.position.y < openDoor.y)
             {
                 blueDoor2.transform.Translate(1 * Time.deltaTime * 1.1f, 0, 0);
             }
         }
 
-
+        if (playerScript_ex04.switchChangePlatformColorRedYellow == true && playerScript_ex04.playerOnSwitchRedYellow > 1)
+        {
+            ChangePlatformColor.GetComponent<SpriteRenderer>().color = new Color(0.7058824f, 0.6117647f, 0.2196079f);
+             ChangePlatformColor.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            ChangePlatformColor.layer = 10;
+        }
+        else if (playerScript_ex04.switchChangePlatformColorRedYellow == true && playerScript_ex04.playerOnSwitchRedYellow < 2)
+        {
+            ChangePlatformColor.GetComponent<SpriteRenderer>().color = new Color(0.8392158f, 0.2705882f, 0.2588235f);
+             ChangePlatformColor.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            ChangePlatformColor.layer = 9;
+        }
+       else if(playerScript_ex04.playerOnSwitch > 0){
+            ChangePlatformColor.GetComponent<SpriteRenderer>().color = new Color(0.145098f, 0.2392157f, 372549f);
+             ChangePlatformColor.GetComponent<SpriteRenderer>().sortingOrder = 2;
+            ChangePlatformColor.layer = 8;
+        }
+        else{
+            ChangePlatformColor.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            ChangePlatformColor.layer = 14;
+        }
     }
 
 
