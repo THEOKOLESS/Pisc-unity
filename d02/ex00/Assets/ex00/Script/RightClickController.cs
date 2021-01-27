@@ -16,10 +16,7 @@ public class RightClickController : MonoBehaviour
         {
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             worldPosition.z = 0f;
-          //  Debug.Log(GetComponent<PlayerController>());
-           // Debug.Log(worldPosition);
             GetComponent<PlayerController>().SetMovePosition(worldPosition);
-        
         }   
     }
 }
