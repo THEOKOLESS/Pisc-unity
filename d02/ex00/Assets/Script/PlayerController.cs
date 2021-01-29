@@ -18,12 +18,11 @@ public class PlayerController : MonoBehaviour
     private float minY;
     private float maxY;
     private float dir;
-    private float normX;
+    private float _xDirNormalized;
+
     // Start is called before the first frame update
     void Start()
     {
-        //PlayerController coucou;
-        //Debug.Log(coucou);
         _speed = 2f;
         movePosition = transform.position;
     }
@@ -45,29 +44,27 @@ public class PlayerController : MonoBehaviour
             _moveDirNomalized = _moveDir.normalized;
             minY = _moveDirNomalized.y - 0.4f;
             maxY = _moveDirNomalized.y + 0.4f;
-            normX = _moveDirNomalized.x;
-            dir = Mathf.Clamp(normX, minY, maxY);
-            animator.SetFloat("dirY", _moveDir.y);
-            animator.SetFloat("dirX", _moveDir.x);
+            _xDirNormalized = _moveDirNomalized.x;
+            dir = Mathf.Clamp(_xDirNormalized, minY, maxY);
 
-            if (_moveDirNomalized.y >= 0.1 && dir == normX)
+            if (_moveDirNomalized.y >= 0.1 && dir == _xDirNormalized)
             {
-                SetDirection("moving_up_right");
+                SetDirection("moving_up_side");
                 transform.eulerAngles = new Vector2(0, 0);
             }
-            else if (_moveDirNomalized.y >= 0.1 && Mathf.Clamp(Mathf.Abs(normX), minY, maxY) == Mathf.Abs(normX))
+            else if (_moveDirNomalized.y >= 0.1 && Mathf.Clamp(Mathf.Abs(_xDirNormalized), minY, maxY) == Mathf.Abs(_xDirNormalized))
             {
-                SetDirection("moving_up_right");
+                SetDirection("moving_up_side");
                 transform.eulerAngles = new Vector2(0, 180);
             }
-            else if (_moveDirNomalized.y <=  -0.1 && dir == normX)
+            else if (_moveDirNomalized.y <=  -0.1 && dir == _xDirNormalized)
             {
-                SetDirection("moving_down_right");
+                SetDirection("moving_down_side");
                 transform.eulerAngles = new Vector2(0, 180);
             }
-            else if (_moveDirNomalized.y <= -0.1 && Mathf.Clamp(normX, Mathf.Abs(maxY), Mathf.Abs(minY)) == normX)
+            else if (_moveDirNomalized.y <= -0.1 && Mathf.Clamp(_xDirNormalized, Mathf.Abs(maxY), Mathf.Abs(minY)) == _xDirNormalized)
             {
-                SetDirection("moving_down_right");
+                SetDirection("moving_down_side");
                 transform.eulerAngles = new Vector2(0, 0);
             }
             else if (_moveDirNomalized.y >= 0.4 && _moveDirNomalized.y > _moveDirNomalized.x)
@@ -89,17 +86,7 @@ public class PlayerController : MonoBehaviour
                 transform.eulerAngles = new Vector2(0, 180);
             }
 
-
-                transform.position += _moveDir.normalized * _speed * Time.deltaTime;
-            //Debug.Log(Mathf.Clamp(normX, Mathf.Abs(minY), Mathf.Abs(maxY)));
-
-
-            // Debug.Log("var = " + normX);
-            //  Debug.Log("minY = " + Mathf.Abs(minY));
-            // Debug.Log("maxY = " + Mathf.Abs(maxY));
-            //Debug.Log("Mathf.Clamp(normX, Mathf.Abs(minY), Mathf.Abs(maxY)) " + Mathf.Clamp(normX, Mathf.Abs(minY), Mathf.Abs(maxY)));
-
-            Debug.Log(_moveDirNomalized);
+            transform.position += _moveDir.normalized * _speed * Time.deltaTime;
             animator.SetBool("moving", true);
         }
         else
@@ -109,22 +96,17 @@ public class PlayerController : MonoBehaviour
      public void SetMovePosition(Vector3 movePosition)
     {
         this.movePosition = movePosition;
-        this.distX = movePosition.x - transform.position.x;
-        this.distY = movePosition.y - transform.position.y;
     }
 
     public  void SetDirection(string dir) {
 
         animator.SetBool("moving_up", false);
-        animator.SetBool("moving_up_right", false);
-        animator.SetBool("moving_up_left", false);
+        animator.SetBool("moving_up_side", false);
 
-        animator.SetBool("moving_right", false);
-        animator.SetBool("moving_left", false);
+        animator.SetBool("moving_side", false);
 
         animator.SetBool("moving_down", false);
-        animator.SetBool("moving_down_right", false);
-        animator.SetBool("moving_down_left", false);
+        animator.SetBool("moving_down_side", false);
 
 
         switch (dir)
@@ -132,26 +114,20 @@ public class PlayerController : MonoBehaviour
             case "moving_up":
                 animator.SetBool("moving_up", true);
                 break;
-            case "moving_up_right":
-                animator.SetBool("moving_up_right", true);
-                break;
-            case "moving_up_left":
-                animator.SetBool("moving_up_left", true);
+            case "moving_up_side":
+                animator.SetBool("moving_up_side", true);
                 break;
             case "moving_right":
-                animator.SetBool("moving_right", true);
+                animator.SetBool("moving_side", true);
                 break;
             case "moving_left":
-                animator.SetBool("moving_left", true);
+                animator.SetBool("moving_side", true);
                 break;
             case "moving_down":
                 animator.SetBool("moving_down", true);
                 break;
-            case "moving_down_right":
-                animator.SetBool("moving_down_right", true);
-                break;
-            case "moving_down_left":
-                animator.SetBool("moving_down_left", true);
+            case "moving_down_side":
+                animator.SetBool("moving_down_side", true);
                 break;
             case "stop":
                 animator.SetBool("moving", false);
@@ -161,11 +137,6 @@ public class PlayerController : MonoBehaviour
         }
 
 
-    }
-
-    public void FlipHorizontal()
-    {
-        animator.transform.Rotate(0, 180, 0);
     }
 
 }
