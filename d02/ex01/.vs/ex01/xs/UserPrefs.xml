@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{78344D1A-0F3E-92F4-2238-D27606BF0640}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/SelectionController.cs">
+    <Files>
+      <File FileName="Assets/Script/Footman.cs" Line="25" Column="6" />
+      <File FileName="Assets/Script/SetMove.cs" Line="11" Column="6" />
+      <File FileName="Assets/Script/FootmanSound.cs" Line="17" Column="33" NotebookId="1" />
+      <File FileName="Assets/Script/SelectionController.cs" Line="21" Column="10" NotebookId="1" />
+      <File FileName="Assets/Script/PlayerController.cs" Line="81" Column="14" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ex01" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c87a18ff-3901-4277-8e32-4004d861987f" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

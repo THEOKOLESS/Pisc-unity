@@ -9,9 +9,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 movePosition;
     private Vector3 _moveDir;
     public Animator animator;
-    private float distX;
-    private float distY;
-    private float angle;
 
     private Vector3 _moveDirNomalized;
 
@@ -27,75 +24,68 @@ public class PlayerController : MonoBehaviour
         movePosition = transform.position;
     }
 
-    public override string ToString()
-    {
-        return "speed ; " + _speed ;
-    }
-
     // Update is called once per frame
     void Update()
     {
-
-        _moveDir = (movePosition - transform.position);
-
-
-        if (_moveDir.magnitude > 0.1f)
+        if (_moveDirNomalized.y >= 0.1 && dir == _xDirNormalized)
         {
-            _moveDirNomalized = _moveDir.normalized;
-            minY = _moveDirNomalized.y - 0.4f;
-            maxY = _moveDirNomalized.y + 0.4f;
-            _xDirNormalized = _moveDirNomalized.x;
-            dir = Mathf.Clamp(_xDirNormalized, minY, maxY);
-
-            if (_moveDirNomalized.y >= 0.1 && dir == _xDirNormalized)
-            {
-                SetDirection("moving_up_side");
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            else if (_moveDirNomalized.y >= 0.1 && Mathf.Clamp(Mathf.Abs(_xDirNormalized), minY, maxY) == Mathf.Abs(_xDirNormalized))
-            {
-                SetDirection("moving_up_side");
-                transform.eulerAngles = new Vector2(0, 180);
-            }
-            else if (_moveDirNomalized.y <=  -0.1 && dir == _xDirNormalized)
-            {
-                SetDirection("moving_down_side");
-                transform.eulerAngles = new Vector2(0, 180);
-            }
-            else if (_moveDirNomalized.y <= -0.1 && Mathf.Clamp(_xDirNormalized, Mathf.Abs(maxY), Mathf.Abs(minY)) == _xDirNormalized)
-            {
-                SetDirection("moving_down_side");
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            else if (_moveDirNomalized.y >= 0.4 && _moveDirNomalized.y > _moveDirNomalized.x)
-            {
-                SetDirection("moving_up");
-            }
-            else if (_moveDirNomalized.y <= -0.4 && _moveDirNomalized.y < _moveDirNomalized.x)
-            {
-                SetDirection("moving_down");
-            }
-            else if (_moveDirNomalized.x >= 0.4 && _moveDirNomalized.x > _moveDirNomalized.y)
-            {
-                SetDirection("moving_right");
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            else if (_moveDirNomalized.x <= -0.4 && _moveDirNomalized.x < _moveDirNomalized.y)
-            {
-                SetDirection("moving_left");
-                transform.eulerAngles = new Vector2(0, 180);
-            }
-
-            transform.position += _moveDir.normalized * _speed * Time.deltaTime;
-            animator.SetBool("moving", true);
+            SetDirection("moving_up_side");
+            transform.eulerAngles = new Vector2(0, 0);
         }
-        else
+        else if (_moveDirNomalized.y >= 0.1 && Mathf.Clamp(Mathf.Abs(_xDirNormalized), minY, maxY) == Mathf.Abs(_xDirNormalized))
+        {
+            SetDirection("moving_up_side");
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+        else if (_moveDirNomalized.y <=  -0.1 && dir == _xDirNormalized)
+        {
+            SetDirection("moving_down_side");
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+        else if (_moveDirNomalized.y <= -0.1 && Mathf.Clamp(_xDirNormalized, Mathf.Abs(maxY), Mathf.Abs(minY)) == _xDirNormalized)
+        {
+            SetDirection("moving_down_side");
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        else if (_moveDirNomalized.y >= 0.4 && _moveDirNomalized.y > _moveDirNomalized.x)
+        {
+            SetDirection("moving_up");
+        }
+        else if (_moveDirNomalized.y <= -0.4 && _moveDirNomalized.y < _moveDirNomalized.x)
+        {
+            SetDirection("moving_down");
+        }
+        else if (_moveDirNomalized.x >= 0.4 && _moveDirNomalized.x > _moveDirNomalized.y)
+        {
+            SetDirection("moving_right");
+            transform.eulerAngles = new Vector2(0, 0);
+        }
+        else if (_moveDirNomalized.x <= -0.4 && _moveDirNomalized.x < _moveDirNomalized.y)
+        {
+            SetDirection("moving_left");
+            transform.eulerAngles = new Vector2(0, 180);
+        }
+
+        animator.SetBool("moving", true);
+
+        if (_moveDir.magnitude < 0.1f)
+        {
+            _moveDirNomalized = Vector3.zero;
             SetDirection("stop");
+        }
+        _moveDir = (movePosition - transform.position);
+        GetComponent<SetMove>().SetMovePos(_moveDirNomalized);     
     }
 
      public void SetMovePosition(Vector3 movePosition)
     {
         this.movePosition = movePosition;
+        this._moveDir = (movePosition - transform.position);
+        this._moveDirNomalized = this._moveDir.normalized;
+        this.minY = this._moveDirNomalized.y - 0.4f;
+        this.maxY = this._moveDirNomalized.y + 0.4f;
+        this._xDirNormalized = this._moveDirNomalized.x;
+        this.dir = Mathf.Clamp(this._xDirNormalized, this.minY, this.maxY);
     }
 
     public  void SetDirection(string dir) {

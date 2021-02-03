@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Footman : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject selectedRing;
+    private PlayerController movePos;
+
+    private void Awake()
     {
-        
+        movePos = GetComponent<PlayerController>();
+        SetSelectedVisible(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public  void    SetSelectedVisible(bool visible)
     {
-        
+        selectedRing.SetActive(visible);
+    }
+
+    public  void    MoveTo(Vector3 targetPos)
+    {
+        movePos.SetMovePosition(targetPos);
     }
 }
