@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 989141301178085142}
   - component: {fileID: 989141301178085141}
-  - component: {fileID: 7325638287204928960}
-  - component: {fileID: 4953776818297167614}
-  - component: {fileID: 989141301178085137}
-  - component: {fileID: 989141301178085139}
+  - component: {fileID: 3479510453070990252}
+  - component: {fileID: 5924545908468515030}
+  - component: {fileID: 1881929073680466734}
+  - component: {fileID: 6983929754148695988}
   - component: {fileID: 989141301178085143}
   - component: {fileID: 989141301178085138}
   - component: {fileID: 989141301178085148}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300004, guid: 8f88dbfbebfd4489d94a3160fe4f73d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7325638287204928960
+--- !u!114 &3479510453070990252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,10 +100,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 989141301178085140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 848dbd1c7d4354ce2a2428da140ea2ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 34265b43f4c8e40449c3c705863d1233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4953776818297167614
+--- !u!114 &5924545908468515030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,24 +112,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 989141301178085140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07ae9e706e177440280edc325e346688, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedRing: {fileID: 4379343133899370510}
---- !u!114 &989141301178085137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 989141301178085140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f220cd3203a51b04288cb342664d3fd3, type: 3}
+  m_Script: {fileID: 11500000, guid: b404e535a29924968b939f56488d542c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 989141301178085143}
---- !u!114 &989141301178085139
+--- !u!114 &1881929073680466734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 989141301178085140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a1f91ec45f7448ccb995ba2709e3f11, type: 3}
+  m_Script: {fileID: 11500000, guid: f24ced274b56d4ca2bd839aa1e76b90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 989141301178085148}
@@ -152,6 +139,19 @@ MonoBehaviour:
   _selected4: {fileID: 8300000, guid: 8dd72f0aa638d42df851b5dc733cd05b, type: 3}
   _selected5: {fileID: 8300000, guid: 0d34fc58d4d934c90affab216fbf4861, type: 3}
   _selected6: {fileID: 8300000, guid: 3f614a96511694b168d73f9145f7cc6e, type: 3}
+--- !u!114 &6983929754148695988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989141301178085140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c1e36a76e7e48179de8aca9f92a80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedRing: {fileID: 4379343133899370510}
 --- !u!95 &989141301178085143
 Animator:
   serializedVersion: 3
@@ -368,6 +368,10 @@ PrefabInstance:
     - target: {fileID: 3711992553359849161, guid: 9b314d35031234bd9b51adc9946a1a0d, type: 3}
       propertyPath: m_Name
       value: SelectedCircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110291026221544593, guid: 9b314d35031234bd9b51adc9946a1a0d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b314d35031234bd9b51adc9946a1a0d, type: 3}
