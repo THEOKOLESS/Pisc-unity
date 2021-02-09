@@ -7,6 +7,8 @@ namespace ex03
     {
         [SerializeField] private GameObject selectedRing;
         private PlayerController movePos;
+        
+        public Attack attack;
 
         private void Awake()
         {
@@ -17,10 +19,19 @@ namespace ex03
 
         private void OnEnable()
         {
+            attack.OnAttack += OnAttackLithener;
             MoveTo(new Vector3(-3.7f, -0.9f, 0));
         }
 
+        private void OnDisable()
+        {
+            attack.OnAttack -= OnAttackLithener;
+        }
 
+        void OnAttackLithener()
+        {
+            Debug.Log(transform.position);
+        }
         public void SetSelectedVisible(bool visible)
         {
             selectedRing.SetActive(visible);

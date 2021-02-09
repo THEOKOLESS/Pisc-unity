@@ -69,6 +69,7 @@ namespace ex03
                 _moveDirNomalized = Vector3.zero;
                 SetDirection("stop");
             }
+
             _moveDir = (movePosition - transform.position);
             GetComponent<SetMove>().SetMovePos(_moveDirNomalized);
         }

@@ -12,12 +12,11 @@ namespace ex03
         private void Start()
         {
             timer = 0f;
-
         }
 
         private void Update()
         {
-            if (timer > 10f)
+            if (timer > 3f)
             {
                 timer = 0f;
                 Instantiate(orc, transform.position, Quaternion.identity);

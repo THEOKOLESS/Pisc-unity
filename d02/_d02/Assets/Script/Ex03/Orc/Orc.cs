@@ -14,7 +14,7 @@ namespace ex03
 
         private void OnEnable()
         {
-            MoveTo(new Vector3(6.7f, -0.1f, 0));
+            MoveTo(new Vector3(6.7f, -10f, 0));
         }
 
         public void MoveTo(Vector3 targetPos)

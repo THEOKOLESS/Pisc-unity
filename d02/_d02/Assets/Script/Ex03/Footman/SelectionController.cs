@@ -1,6 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
+using UnityEditor.UIElements;
 using UnityEngine;
+
 namespace ex03
 {
 
@@ -13,6 +17,9 @@ namespace ex03
         private Collider2D attack;
         private Footman footman;
         private FootmanSound footmanSound;
+        private Orc orc;
+
+        List<Vector3> targetPositionList;
         // Start is called before the first frame update
         void Start()
         {
@@ -22,6 +29,8 @@ namespace ex03
         // Update is called once per frame
         private void Update()
         {
+            attack = Physics2D.OverlapPoint(worldPosition, LayerMask.GetMask("Orc"));
+          
             if (Input.GetMouseButtonDown(0))
             {
                 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -39,16 +48,27 @@ namespace ex03
                 {
                     if (footmanSelectedList.Count > 0)
                     {
-                        attack = Physics2D.OverlapPoint(worldPosition, LayerMask.GetMask("Orc"));
-                        if(attack != null)
+                        
+                        //attack = Physics2D.OverlapPoint(worldPosition, LayerMask.GetMask("Orc"));
+                        if (attack != null)
                         {
+                            orc = attack.GetComponent<Orc>();
+                           // Debug.Log(attack.transform.position);
+                            targetPositionList = GetPositionListAround(orc.transform.position, new float[] { 0.7f, 1.2f, 1.7f }, new int[] { 5, 10, 20 }, true);
                             Debug.Log("ATTACK");
                         }
-                   
+                        else
+                        {
+                            targetPositionList = GetPositionListAround(worldPosition, new float[] { 1f, 2f, 3f }, new int[] { 5, 10, 20 }, false);
+                            Debug.Log("Walk");
+                        }
+
+                        int targetPositionListIndex = 0;
 
                         foreach (Footman footman in footmanSelectedList)
                         {
-                            footman.MoveTo(worldPosition);
+                            footman.MoveTo(targetPositionList[targetPositionListIndex]);
+                            targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
                         }
                         footmanSound.playAcknowledgeClip();
                     }
@@ -61,9 +81,38 @@ namespace ex03
                 }
 
             }
+          
             if (Input.GetMouseButtonDown(1))
                 ClearFootmanList();
 
+        }
+        private List<Vector3> GetPositionListAround(Vector3 startPos, float[] ringDistanceArray, int[] ringPositionArray, bool attack)
+        {
+            List<Vector3> positionList = new List<Vector3>();
+            if (attack == false)
+                positionList.Add(startPos);
+            for (int i = 0; i < ringDistanceArray.Length; i++)
+            {
+                positionList.AddRange(GetPositionListAround(startPos, ringDistanceArray[i], ringPositionArray[i]));
+            }
+            return (positionList);
+        }
+        private List<Vector3> GetPositionListAround(Vector3 startPosition, float dist, int posCount)
+        {
+            List<Vector3> positionList = new List<Vector3>();
+            for(int i = 0; i< posCount; i++)
+            {
+                float angle = i * (360f / posCount);
+                Vector3 dir = ApplyRotationToVector(new Vector3(1, 0), angle);
+                Vector3 position = startPosition + dir * dist;
+                positionList.Add(position);
+            }
+            return positionList;
+        }
+
+        private Vector3 ApplyRotationToVector (Vector3 vec, float angle)
+        {
+            return Quaternion.Euler(0, 0, angle) * vec;
         }
 
         void ClearFootmanList()
