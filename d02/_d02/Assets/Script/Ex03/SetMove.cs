@@ -11,7 +11,7 @@ namespace ex03
         // Start is called before the first frame update
         void Start()
         {
-            _speed = 1f;
+            _speed = 2f;
         }
 
         // Update is called once per frame

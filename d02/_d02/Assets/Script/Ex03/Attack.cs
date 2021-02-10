@@ -9,10 +9,7 @@ public class Attack : MonoBehaviour
 
 
     private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            OnAttack();
-        }
+    { 
+        OnAttack();
     }
 }

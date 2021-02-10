@@ -8,29 +8,29 @@ namespace ex03
         [SerializeField] private GameObject selectedRing;
         private PlayerController movePos;
         
-        public Attack attack;
+        //public Attack attack;
 
         private void Awake()
         {
             movePos = GetComponent<PlayerController>();
-            SetSelectedVisible(false);
-           
+            SetSelectedVisible(false);          
         }
 
         private void OnEnable()
         {
-            attack.OnAttack += OnAttackLithener;
+          //  attack.OnAttack += OnAttackLithener;
             MoveTo(new Vector3(-3.7f, -0.9f, 0));
-        }
+        }   
 
         private void OnDisable()
         {
-            attack.OnAttack -= OnAttackLithener;
+         //   attack.OnAttack -= OnAttackLithener;
         }
 
-        void OnAttackLithener()
+        void OnAttackLithener(GameObject selectedRing )
         {
-            Debug.Log(transform.position);
+            if(selectedRing.activeSelf)
+                Debug.Log("event");
         }
         public void SetSelectedVisible(bool visible)
         {

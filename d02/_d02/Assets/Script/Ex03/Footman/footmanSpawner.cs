@@ -17,7 +17,7 @@ namespace ex03
 
         private void Update()
         {
-            if (timer > 10f)
+            if (timer > 3f)
             {
                 timer = 0f;
                 Instantiate(footman, transform.position, Quaternion.identity);

@@ -36,7 +36,7 @@ namespace ex03
         }
 
 
-        public void playAcknowledgeClip()
+        public void PlayAcknowledgeClip()
         {
             int index = Random.Range(0, _acknowledgeArray.Length);
             shootClip = _acknowledgeArray[index];
@@ -44,7 +44,7 @@ namespace ex03
             audioSource.Play();
         }
 
-        public void playSelectedClip()
+        public void PlaySelectedClip()
         {
             int index = Random.Range(0, _selectedArray.Length);
             shootClip = _selectedArray[index];
