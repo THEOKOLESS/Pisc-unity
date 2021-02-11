@@ -612,6 +612,7 @@ GameObject:
   - component: {fileID: 693958468}
   - component: {fileID: 693958471}
   - component: {fileID: 693958470}
+  - component: {fileID: 693958472}
   m_Layer: 9
   m_Name: Orc Forum
   m_TagString: Untagged
@@ -709,6 +710,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orc: {fileID: 989141301178085140, guid: 955b93aa31df447608432f3625e247c4, type: 3}
+--- !u!61 &693958472
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693958467}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.047619, y: 3.047619}
+    newSize: {x: 3.047619, y: 3.047619}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.047619, y: 3.047619}
+  m_EdgeRadius: 0
 --- !u!1 &903004079
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,6 +747,7 @@ GameObject:
   - component: {fileID: 903004081}
   - component: {fileID: 903004080}
   - component: {fileID: 903004082}
+  - component: {fileID: 903004083}
   m_Layer: 9
   m_Name: Orc Building 2
   m_TagString: Untagged
@@ -804,6 +832,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8879bfc517fc8419e8c277f62e1de3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &903004083
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903004079}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.2619047, y: 2.0238094}
+    newSize: {x: 2.2619047, y: 2.0238094}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2619047, y: 2.0238094}
+  m_EdgeRadius: 0
 --- !u!1 &1139415505
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,6 +1021,7 @@ GameObject:
   - component: {fileID: 1722161442}
   - component: {fileID: 1722161441}
   - component: {fileID: 1722161443}
+  - component: {fileID: 1722161444}
   m_Layer: 9
   m_Name: Orc Building 1
   m_TagString: Untagged
@@ -1051,6 +1106,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8879bfc517fc8419e8c277f62e1de3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1722161444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1722161440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.2142856, y: 2.2857144}
+    newSize: {x: 2.2142856, y: 2.2857144}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2142856, y: 2.2857144}
+  m_EdgeRadius: 0
 --- !u!1001 &1838615339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1163,6 +1244,7 @@ GameObject:
   - component: {fileID: 2042748481}
   - component: {fileID: 2042748480}
   - component: {fileID: 2042748482}
+  - component: {fileID: 2042748483}
   m_Layer: 9
   m_Name: Orc Building 4
   m_TagString: Untagged
@@ -1247,6 +1329,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8879bfc517fc8419e8c277f62e1de3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &2042748483
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042748479}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.5238096, y: 1.5238096}
+    newSize: {x: 1.5238096, y: 1.5238096}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5238096, y: 1.5238096}
+  m_EdgeRadius: 0
 --- !u!1 &2091340446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,6 +1366,7 @@ GameObject:
   - component: {fileID: 2091340448}
   - component: {fileID: 2091340447}
   - component: {fileID: 2091340449}
+  - component: {fileID: 2091340450}
   m_Layer: 9
   m_Name: Orc Building 3
   m_TagString: Untagged
@@ -1342,3 +1451,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8879bfc517fc8419e8c277f62e1de3f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &2091340450
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091340446}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.2857144, y: 2.2857144}
+    newSize: {x: 2.2857144, y: 2.2857144}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2857144, y: 2.2857144}
+  m_EdgeRadius: 0

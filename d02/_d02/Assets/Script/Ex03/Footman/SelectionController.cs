@@ -7,8 +7,6 @@ using UnityEngine;
 
 namespace ex03
 {
-
-
     public class SelectionController : MonoBehaviour
     {
         private Vector3 worldPosition;
@@ -17,7 +15,6 @@ namespace ex03
         private Collider2D attack;
         private Footman footman;
         private FootmanSound footmanSound;
-        private Vector3 orc;
 
         public Attack footmanAttack;
 
@@ -42,15 +39,18 @@ namespace ex03
         {
             if (attack != null && footmanSelectedList.Count > 0)
             {
-                orc = attack.GetComponent<Orc>().posOrc;
-                Debug.Log("ATTACK" + orc);
-                targetPositionList = GetPositionListAround(orc, new float[] { 0.7f, 1.2f, 1.7f }, new int[] { 5, 10, 20 }, true);
-                //Debug.Log("ATTACK");
-                int targetPositionListIndex = 0;
                 foreach (Footman footman in footmanSelectedList)
                 {
-                    footman.MoveTo(targetPositionList[targetPositionListIndex]);
-                    targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+                    footman.GetComponent<Footman>().SetAttack(true);
+                    footman.GetComponent<Footman>().SetEnemy(attack);
+                }
+
+            }
+            else if (footmanSelectedList.Count > 0)
+            {
+                foreach (Footman footman in footmanSelectedList)
+                {
+                    footman.GetComponent<Footman>().SetAttack(false);
                 }
             }
         }
@@ -69,33 +69,27 @@ namespace ex03
                     footmanSound = collider2d.GetComponent<FootmanSound>();
                 }
                 if (!Input.GetKey(KeyCode.LeftControl) && collider2d)
+                {
                     ClearFootmanList();
+                    attack = null;
+                }
+                    
                 if (!Input.GetKey(KeyCode.LeftControl))
                 {
                     if (footmanSelectedList.Count > 0)
                     {
                         attack = Physics2D.OverlapPoint(worldPosition, LayerMask.GetMask("Orc"));
-                        //if (attack != null)
-                        //{
-                        //    //orc = attack.getcomponent<orc>();
-                        //    //debug.log(attack.transform.position);
-                        //    //targetpositionlist = getpositionlistaround(orc.transform.position, new float[] { 0.7f, 1.2f, 1.7f }, new int[] { 5, 10, 20 }, true);
-                        //    //debug.log("attack");
-                        //}
-
                         if (attack == null)
                         {
                             targetPositionList = GetPositionListAround(worldPosition, new float[] { 1f, 2f, 3f }, new int[] { 5, 10, 20 }, false);
+                            int targetPositionListIndex = 0;
+                            foreach (Footman footman in footmanSelectedList)
+                            {
+                                footman.MoveTo(targetPositionList[targetPositionListIndex]);
+                                targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
+                            }
                         }
-
                         footmanSound.PlayAcknowledgeClip();
-
-                        int targetPositionListIndex = 0;
-                        foreach (Footman footman in footmanSelectedList)
-                        {
-                            footman.MoveTo(targetPositionList[targetPositionListIndex]);
-                            targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
-                        }
                     }
                 }
                 if (collider2d != null)
@@ -106,7 +100,10 @@ namespace ex03
                 }
             }
             else if (Input.GetMouseButtonDown(1))
+            {
                 ClearFootmanList();
+                attack = null; 
+            }
         }
           
     private List<Vector3> GetPositionListAround(Vector3 startPos, float[] ringDistanceArray, int[] ringPositionArray, bool attack)

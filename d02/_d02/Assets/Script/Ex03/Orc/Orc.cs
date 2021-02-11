@@ -5,8 +5,8 @@ namespace ex03
 {
     public class Orc : MonoBehaviour
     {
-        private PlayerController movePos;
-        public Vector3 posOrc;
+        private PlayerController movePos;   
+        
 
         private void Awake()
         {
@@ -16,15 +16,14 @@ namespace ex03
 
         private void OnEnable()
         {
-            MoveTo(new Vector3(6.7f, -7f, 0));
-        }
-        private void Update()
-        {
-            posOrc = transform.position;
-           // Debug.Log(posOrc);
+     
+            MoveTo(new Vector3(6.7f, -6f, 0));
         }
 
-            public void MoveTo(Vector3 targetPos)
+ 
+
+
+        public void MoveTo(Vector3 targetPos)
         {
             movePos.SetMovePosition(targetPos);
         }

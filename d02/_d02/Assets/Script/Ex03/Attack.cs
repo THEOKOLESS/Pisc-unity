@@ -1,15 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Attack : MonoBehaviour
+namespace ex03
 {
-    public delegate void VoidDelegateGameObject();
-    public event VoidDelegateGameObject OnAttack;
 
+    public class Attack : MonoBehaviour
+    {
+        public delegate void VoidDelegate();
 
-    private void Update()
-    { 
-        OnAttack();
+        public static Attack instance { get; private set; }
+
+        public event VoidDelegate OnAttack;
+
+        public delegate void VoidDelegateInt(int i);
+
+        public event VoidDelegateInt GetAttacked;
+
+        public void RaiseGetAttacked(int val)
+        {
+            GetAttacked?.Invoke(val);
+        }
+
+        private void Awake()
+        {
+            instance = this;
+        }
+
+        private void Update()
+        { 
+            OnAttack();  
+        }
     }
 }
