@@ -64,25 +64,25 @@
      <Compile Include="Assets\Script\Ex03\Orc\OrcSpawner.cs" />
      <Compile Include="Assets\Script\Ex03\PlayerController.cs" />
      <Compile Include="Assets\Script\Ex02\PlayerController.cs" />
-     <Compile Include="Assets\Script\Ex03\BuildingScript.cs" />
      <Compile Include="Assets\Script\Ex02\Footman\SelectionController.cs" />
      <Compile Include="Assets\Script\Ex03\Footman\Footman.cs" />
+     <Compile Include="Assets\Script\Ex03\Footman\FootmanAttack.cs" />
      <Compile Include="Assets\Script\Ex02\BuildingScript.cs" />
      <Compile Include="Assets\Script\Ex02\Footman\FootmanSound.cs" />
      <Compile Include="Assets\Script\Ex02\Footman\footmanSpawner.cs" />
      <Compile Include="Assets\Script\Ex03\SetMove.cs" />
      <Compile Include="Assets\Script\Ex01\SelectionController.cs" />
      <Compile Include="Assets\Script\Ex02\Footman\Footman.cs" />
+     <Compile Include="Assets\Script\Ex03\GetAttacked.cs" />
      <Compile Include="Assets\Script\Ex02\Orc\Orc.cs" />
      <Compile Include="Assets\Script\Ex03\Footman\FootmanSound.cs" />
      <Compile Include="Assets\Script\Ex03\Attack.cs" />
      <Compile Include="Assets\Script\Ex01\SetMove.cs" />
      <Compile Include="Assets\Script\Ex02\Orc\OrcSpawner.cs" />
      <Compile Include="Assets\Script\Ex01\FootmanSound.cs" />
+     <Compile Include="Assets\Script\Ex03\Orc\OrcSound.cs" />
      <Compile Include="Assets\Script\Ex03\Orc\Orc.cs" />
      <Compile Include="Assets\Script\Ex03\Footman\footmanSpawner.cs" />
-     <Compile Include="Assets\Script\Ex03\Footman\FootmanAttack.cs" />
-     <Compile Include="Assets\Script\Ex03\GetAttacked.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/AbeyCultivey/Desktop/Pisc-unity/d02/_d02/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

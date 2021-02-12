@@ -36,9 +36,10 @@ namespace ex03
             footmanAttack.OnAttack -= OnAttackLithener;
         }
         void OnAttackLithener()
-        {
+        { 
             if (attack != null && footmanSelectedList.Count > 0)
             {
+              
                 foreach (Footman footman in footmanSelectedList)
                 {
                     footman.GetComponent<Footman>().SetAttack(true);

@@ -11,6 +11,8 @@ namespace ex03
         private Vector3 _moveDir;
         public Animator animator;
 
+        private bool died = false;
+
         private Vector3 _moveDirNomalized;
 
         private float minY;
@@ -23,55 +25,64 @@ namespace ex03
         // Update is called once per frame
         void Update()
         {
-            if (_moveDirNomalized.y >= 0.1 && dir == _xDirNormalized)
+            if (died == false)
             {
-                SetDirection("moving_up_side");
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            else if (_moveDirNomalized.y >= 0.1 && Mathf.Clamp(Mathf.Abs(_xDirNormalized), minY, maxY) == Mathf.Abs(_xDirNormalized))
-            {
-                SetDirection("moving_up_side");
-                transform.eulerAngles = new Vector2(0, 180);
-            }
-            else if (_moveDirNomalized.y <= -0.1 && dir == _xDirNormalized)
-            {
-                SetDirection("moving_down_side");
-                transform.eulerAngles = new Vector2(0, 180);
-            }
-            else if (_moveDirNomalized.y <= -0.1 && Mathf.Clamp(_xDirNormalized, Mathf.Abs(maxY), Mathf.Abs(minY)) == _xDirNormalized)
-            {
-                SetDirection("moving_down_side");
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            else if (_moveDirNomalized.y >= 0.4 && _moveDirNomalized.y > _moveDirNomalized.x)
-            {
-                SetDirection("moving_up");
-            }
-            else if (_moveDirNomalized.y <= -0.4 && _moveDirNomalized.y < _moveDirNomalized.x)
-            {
-                SetDirection("moving_down");
-            }
-            else if (_moveDirNomalized.x >= 0.4 && _moveDirNomalized.x > _moveDirNomalized.y)
-            {
-                SetDirection("moving_right");
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            else if (_moveDirNomalized.x <= -0.4 && _moveDirNomalized.x < _moveDirNomalized.y)
-            {
-                SetDirection("moving_left");
-                transform.eulerAngles = new Vector2(0, 180);
-            }
+                if (_moveDirNomalized.y >= 0.1 && dir == _xDirNormalized)
+                {
+                    SetDirection("moving_up_side");
+                    transform.eulerAngles = new Vector2(0, 0);
+                }
+                else if (_moveDirNomalized.y >= 0.1 && Mathf.Clamp(Mathf.Abs(_xDirNormalized), minY, maxY) == Mathf.Abs(_xDirNormalized))
+                {
+                    SetDirection("moving_up_side");
+                    transform.eulerAngles = new Vector2(0, 180);
+                }
+                else if (_moveDirNomalized.y <= -0.1 && dir == _xDirNormalized)
+                {
+                    SetDirection("moving_down_side");
+                    transform.eulerAngles = new Vector2(0, 180);
+                }
+                else if (_moveDirNomalized.y <= -0.1 && Mathf.Clamp(_xDirNormalized, Mathf.Abs(maxY), Mathf.Abs(minY)) == _xDirNormalized)
+                {
+                    SetDirection("moving_down_side");
+                    transform.eulerAngles = new Vector2(0, 0);
+                }
+                else if (_moveDirNomalized.y >= 0.4 && _moveDirNomalized.y > _moveDirNomalized.x)
+                {
+                    SetDirection("moving_up");
+                }
+                else if (_moveDirNomalized.y <= -0.4 && _moveDirNomalized.y < _moveDirNomalized.x)
+                {
+                    SetDirection("moving_down");
+                }
+                else if (_moveDirNomalized.x >= 0.4 && _moveDirNomalized.x > _moveDirNomalized.y)
+                {
+                    SetDirection("moving_right");
+                    transform.eulerAngles = new Vector2(0, 0);
+                }
+                else if (_moveDirNomalized.x <= -0.4 && _moveDirNomalized.x < _moveDirNomalized.y)
+                {
+                    SetDirection("moving_left");
+                    transform.eulerAngles = new Vector2(0, 180);
+                }
 
-            animator.SetBool("moving", true);
+                animator.SetBool("moving", true);
 
-            if (_moveDir.magnitude < 0.1f)
+                if (_moveDir.magnitude < 0.1f)
+                {
+                    _moveDirNomalized = Vector3.zero;
+                    SetDirection("stop");
+                }
+
+                _moveDir = (movePosition - transform.position);
+                GetComponent<SetMove>().SetMovePos(_moveDirNomalized);
+            }
+            else
             {
-                _moveDirNomalized = Vector3.zero;
+                GetComponent<SetMove>().SetMovePos(Vector3.zero);
                 SetDirection("stop");
+                animator.SetBool("dead", true);
             }
-
-            _moveDir = (movePosition - transform.position);
-            GetComponent<SetMove>().SetMovePos(_moveDirNomalized);
         }
 
         public void SetMovePosition(Vector3 movePosition)
@@ -84,6 +95,12 @@ namespace ex03
             this._xDirNormalized = this._moveDirNomalized.x;
             this.dir = Mathf.Clamp(this._xDirNormalized, this.minY, this.maxY);
         }
+
+        public void IsDead(bool died)
+        {
+            this.died = died;
+        }
+
 
         public void SetDirection(string dir)
         {

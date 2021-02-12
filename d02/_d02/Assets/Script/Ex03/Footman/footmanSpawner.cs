@@ -17,14 +17,13 @@ namespace ex03
 
         private void Update()
         {
-            if (timer > 3f)
+            if (timer > 10f)
             {
                 timer = 0f;
                 Instantiate(footman, transform.position, Quaternion.identity);
             }
 
                 timer += Time.deltaTime;
-
         }
     }
 }

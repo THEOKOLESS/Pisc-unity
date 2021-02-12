@@ -17,7 +17,7 @@ namespace ex03
         private void OnEnable()
         {
      
-            MoveTo(new Vector3(6.7f, -6f, 0));
+            MoveTo(new Vector3(Random.Range(-7f, 7f), Random.Range(-6f, 6f), 0));
         }
 
  
