@@ -710,11 +710,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5470878102662301580, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.420637
+      value: 3.96
       objectReference: {fileID: 0}
     - target: {fileID: 5470878102662301580, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5349592
+      value: 1.49
       objectReference: {fileID: 0}
     - target: {fileID: 5470878102662301580, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -749,9 +749,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5470878102662301581, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301581, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301581, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300072, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.8333333
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.7619047
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: hp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300070, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4
@@ -809,6 +833,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300080, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4 (1)
@@ -1110,6 +1138,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300030, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.2619047
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.0238094
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300028, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4 (3)
@@ -1171,6 +1211,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300078, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300076, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4 (2)

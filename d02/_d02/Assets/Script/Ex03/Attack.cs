@@ -22,7 +22,6 @@ namespace ex03
 
         private void Awake()
         {
-            Debug.Log("AWAKE P  UTAIN");
             if (instance == null)
                 instance = this;
         }
@@ -30,11 +29,6 @@ namespace ex03
         private void Update()
         { 
             OnAttack();  
-        }
-
-        public override string ToString()
-        {
-            return  ("coucou");
         }
     }
 }

@@ -1,0 +1,1113 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker18
+-projectPath
+/Users/tvitoux/42/unity/Pisc-unity/d02/_d02
+-logFile
+Logs/AssetImportWorker18.log
+-srvPort
+62838
+Successfully changed project path to: /Users/tvitoux/42/unity/Pisc-unity/d02/_d02
+/Users/tvitoux/42/unity/Pisc-unity/d02/_d02
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 48.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.2f1 (068178b99f32)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/tvitoux/42/unity/Pisc-unity/d02/_d02/Assets
+GfxDevice: creating device client; threaded=0
+2021-02-15 11:38:36.730 Unity[23124:1378272] iMac preferred device: Intel Iris Pro Graphics (low power)
+2021-02-15 11:38:36.730 Unity[23124:1378272] Metal devices available: 1
+2021-02-15 11:38:36.730 Unity[23124:1378272] 0: Intel Iris Pro Graphics (low power)
+2021-02-15 11:38:36.730 Unity[23124:1378272] Using device Intel Iris Pro Graphics (low power)
+Initializing Metal device caps: Intel Iris Pro Graphics
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56124
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.000605 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 48.12 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.629 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.000721 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 47.22 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.667 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.23 seconds
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1801 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 140.8 MB.
+System memory in use after: 140.9 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2248.
+Total: 2.469030 ms (FindLiveObjects: 0.270471 ms CreateObjectMapping: 0.072421 ms MarkObjects: 2.056682 ms  DeleteObjects: 0.067218 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Script/Ex03/GetAttacked.cs
+  artifactKey: Guid(b138f71b338da45e795228dcf63fb597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/GetAttacked.cs using Guid(b138f71b338da45e795228dcf63fb597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28e9378fee62282a6ffe695bac1d6375') in 1.283716 seconds
+  Import took 1.287768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 315.811506 seconds.
+  path: Assets/annimation/Orc_building
+  artifactKey: Guid(92918d7c9cdfc436083f77b6a3df0619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/annimation/Orc_building using Guid(92918d7c9cdfc436083f77b6a3df0619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0276f8b8fe81cbb43386a8ca2be02c04') in 0.087929 seconds
+  Import took 0.093274 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.910558 seconds.
+  path: Assets/Sprites/Orc Town.png
+  artifactKey: Guid(688756f0708394bf6aee9b0028a0ed8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Orc Town.png using Guid(688756f0708394bf6aee9b0028a0ed8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32682a236c809652e690361ca35dfb97') in 4.565817 seconds
+  Import took 4.616030 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.192272 seconds.
+  path: Assets/Sprites/Orc.png
+  artifactKey: Guid(e152ba4ac574b4c1795587e4132ec6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Orc.png using Guid(e152ba4ac574b4c1795587e4132ec6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04a8d73787be4dbaccfd7c59f2facb8e') in 0.338935 seconds
+  Import took 0.380004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.035418 seconds.
+  path: Assets/Sprites/Archer.png
+  artifactKey: Guid(638c8c27a8ea8469c8daefa0a49bbbad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Archer.png using Guid(638c8c27a8ea8469c8daefa0a49bbbad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d0cf9bb8421760c540aa7d3427c5263') in 0.517645 seconds
+  Import took 0.686060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.833729 seconds.
+  path: Assets/Sprites/Footman.png
+  artifactKey: Guid(8f88dbfbebfd4489d94a3160fe4f73d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Footman.png using Guid(8f88dbfbebfd4489d94a3160fe4f73d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '455a606d14693e54325701ada5928553') in 0.415122 seconds
+  Import took 0.500456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.271898 seconds.
+  path: Assets/Sprites/Human Town.png
+  artifactKey: Guid(2c3676f8cab8245f1bcaeaa4f0596a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Human Town.png using Guid(2c3676f8cab8245f1bcaeaa4f0596a1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c4ff3e7d5dc2c0a24700b9ded9c965d') in 0.286659 seconds
+  Import took 0.343980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.824124 seconds.
+  path: Assets/Sprites/Tiles.png
+  artifactKey: Guid(a71122d8a75c64d98975e7c2ed4c958a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Tiles.png using Guid(a71122d8a75c64d98975e7c2ed4c958a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec641351ce109ce30334086c98e09687') in 0.962937 seconds
+  Import took 1.000992 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.730314 seconds.
+  path: Assets/Prefabs/Selected Source.png
+  artifactKey: Guid(b45d73e9d0842450e9d6a34b09d5c69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Selected Source.png using Guid(b45d73e9d0842450e9d6a34b09d5c69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd44fdc3c8d02d768ff39e1fe53632a50') in 0.076821 seconds
+  Import took 0.114479 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.065556 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.59 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.060 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.0 MB.
+System memory in use after: 157.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2662.
+Total: 2.589119 ms (FindLiveObjects: 0.325749 ms CreateObjectMapping: 0.085840 ms MarkObjects: 2.158048 ms  DeleteObjects: 0.018172 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.045124 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.574 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.4 MB.
+System memory in use after: 157.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2664.
+Total: 2.945277 ms (FindLiveObjects: 0.316105 ms CreateObjectMapping: 0.151479 ms MarkObjects: 2.457534 ms  DeleteObjects: 0.019079 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1764.862547 seconds.
+  path: Assets/Prefabs/Map.prefab
+  artifactKey: Guid(3fae31b33f1df4622a628af1e6d4d0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Map.prefab using Guid(3fae31b33f1df4622a628af1e6d4d0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a19073f02c0ff75e51a6d3475692fc55') in 0.825626 seconds
+  Import took 0.867485 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Prefabs/orc.prefab
+  artifactKey: Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/orc.prefab using Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20691c322fa44fbc6b4b6f72abc65f3f') in 0.302189 seconds
+  Import took 0.333792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Prefabs/Orc Building 4.prefab
+  artifactKey: Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Orc Building 4.prefab using Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b472988bc69f4aa50af6f8b3152f8184') in 0.203359 seconds
+  Import took 0.233408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Prefabs/Footman.prefab
+  artifactKey: Guid(48661130f693a4b66b9e828d1bf7dbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Footman.prefab using Guid(48661130f693a4b66b9e828d1bf7dbd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6aa23268588cf091ec7e41c39daa39cc') in 0.893999 seconds
+  Import took 0.937350 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000311 seconds.
+  path: Assets/Prefabs/SelectedCircle.prefab
+  artifactKey: Guid(9b314d35031234bd9b51adc9946a1a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/SelectedCircle.prefab using Guid(9b314d35031234bd9b51adc9946a1a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c5d965591e0a0b21b0702ec38bfaf9e') in 0.079339 seconds
+  Import took 0.082884 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.054469 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.246 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 162.6 MB.
+System memory in use after: 162.7 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2670.
+Total: 2.876635 ms (FindLiveObjects: 0.303813 ms CreateObjectMapping: 0.152833 ms MarkObjects: 2.399782 ms  DeleteObjects: 0.018960 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000597 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.317 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.0 MB.
+System memory in use after: 163.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2672.
+Total: 2.521390 ms (FindLiveObjects: 0.274141 ms CreateObjectMapping: 0.088481 ms MarkObjects: 2.137792 ms  DeleteObjects: 0.018560 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000571 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.306 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.3 MB.
+System memory in use after: 163.4 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2674.
+Total: 2.121695 ms (FindLiveObjects: 0.205687 ms CreateObjectMapping: 0.084894 ms MarkObjects: 1.813054 ms  DeleteObjects: 0.016659 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000570 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.261 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 163.7 MB.
+System memory in use after: 163.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2676.
+Total: 2.434276 ms (FindLiveObjects: 0.260358 ms CreateObjectMapping: 0.083725 ms MarkObjects: 2.068134 ms  DeleteObjects: 0.019765 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000642 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.245 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.1 MB.
+System memory in use after: 164.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2678.
+Total: 2.613224 ms (FindLiveObjects: 0.285206 ms CreateObjectMapping: 0.098089 ms MarkObjects: 2.210880 ms  DeleteObjects: 0.017761 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000658 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.358 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.4 MB.
+System memory in use after: 164.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2680.
+Total: 2.525695 ms (FindLiveObjects: 0.298759 ms CreateObjectMapping: 0.087709 ms MarkObjects: 2.119665 ms  DeleteObjects: 0.017552 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.190036 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.327 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 164.8 MB.
+System memory in use after: 164.9 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2682.
+Total: 2.306060 ms (FindLiveObjects: 0.270673 ms CreateObjectMapping: 0.071955 ms MarkObjects: 1.943150 ms  DeleteObjects: 0.018512 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 581.114508 seconds.
+  path: Assets/Sounds/Orc
+  artifactKey: Guid(eeea327d849deee47b3829cc2dcd0a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc using Guid(eeea327d849deee47b3829cc2dcd0a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b576a414f507d79e8159cf45bbf17f70') in 1.428584 seconds
+  Import took 1.432300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Sounds/Orc/acknowledge1.wav
+  artifactKey: Guid(ccbee47ab1a9b409baa83b25fe4c1cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/acknowledge1.wav using Guid(ccbee47ab1a9b409baa83b25fe4c1cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b58135284ef47763e5299919d229459d') in 22.370551 seconds
+  Import took 23.398601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000326 seconds.
+  path: Assets/Sounds/Orc/annoyed2.wav
+  artifactKey: Guid(afa82c172f01f486a8fac685ea435b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/annoyed2.wav using Guid(afa82c172f01f486a8fac685ea435b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c01b36205c4a83ff988781a81e63ec01') in 0.884438 seconds
+  Import took 1.520108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Sounds/Orc/selected2.wav
+  artifactKey: Guid(a8fa6aa4c1e3b4ef991515f27ec468b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/selected2.wav using Guid(a8fa6aa4c1e3b4ef991515f27ec468b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e49234011e13c46688caf182f7e2206') in 0.552432 seconds
+  Import took 0.843952 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000389 seconds.
+  path: Assets/Sounds/Orc/acknowledge3.wav
+  artifactKey: Guid(2616c760dd7aa4feabb8e6f790dc1f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/acknowledge3.wav using Guid(2616c760dd7aa4feabb8e6f790dc1f46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd0badee911b42ff53fb3d941e5e9faf') in 0.809249 seconds
+  Import took 1.071414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Sounds/Orc/selected6.wav
+  artifactKey: Guid(0d55e2ed6a2164e10b5d1e6a3b3b3aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/selected6.wav using Guid(0d55e2ed6a2164e10b5d1e6a3b3b3aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45f71944a759a637a9b2f7177ce6391f') in 0.852089 seconds
+  Import took 0.856081 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Sounds/Orc/acknowledge2.wav
+  artifactKey: Guid(ea31bd820f1c342d6b30c3395073b24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/acknowledge2.wav using Guid(ea31bd820f1c342d6b30c3395073b24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f51219286db323cba4351214762d6a') in 1.167581 seconds
+  Import took 1.477551 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Sounds/Orc/help1.wav
+  artifactKey: Guid(036f166d55ed8459eb5f65eaed8be7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/help1.wav using Guid(036f166d55ed8459eb5f65eaed8be7c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4d77641b7effd1bdd2e51839c82df51') in 0.751075 seconds
+  Import took 39.333116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.810882 seconds.
+  path: Assets/Sounds/Orc/selected1.wav
+  artifactKey: Guid(b0b4133aa054043d4935cddb06a23377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/selected1.wav using Guid(b0b4133aa054043d4935cddb06a23377) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e02266ae0190c73663ae1d989c8ce9a') in 59.527622 seconds
+  Import took 61.346276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Sounds/Orc/selected5.wav
+  artifactKey: Guid(d08f12780701f443e952f7a16b60e5a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/selected5.wav using Guid(d08f12780701f443e952f7a16b60e5a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a07ad45dee259670d478d5e081cbbb6c') in 4.455451 seconds
+  Import took 4.557785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000298 seconds.
+  path: Assets/Sounds/Orc/acknowledge4.wav
+  artifactKey: Guid(ea32fad43c9d342d9a411f0815877695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/acknowledge4.wav using Guid(ea32fad43c9d342d9a411f0815877695) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '198e33cb6b3d6c1a016bfdd7bd8507d9') in 8.184335 seconds
+  Import took 12.773817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.182861 seconds.
+  path: Assets/Sounds/Orc/selected3.wav
+  artifactKey: Guid(df073fb25e7ef422fbdcfece5d08ea30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/selected3.wav using Guid(df073fb25e7ef422fbdcfece5d08ea30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75d932de8d6c69b66f8f2226d7fc1921') in 2.712816 seconds
+  Import took 2.995175 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000330 seconds.
+  path: Assets/Sounds/Orc/death.wav
+  artifactKey: Guid(ecc6df5e38e6b4fcb93c0ba729d9e42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/death.wav using Guid(ecc6df5e38e6b4fcb93c0ba729d9e42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a8353d1c1115f1cc563bb35a504dc34') in 13.604685 seconds
+  Import took 16.774501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000348 seconds.
+  path: Assets/Sounds/Orc/help2.wav
+  artifactKey: Guid(ca33546340f77442999fcd1bac263b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/help2.wav using Guid(ca33546340f77442999fcd1bac263b47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '287a7c74c8d14fb828a92f0edd6acfb1') in 3.019868 seconds
+  Import took 3.424726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Sounds/Orc/annoyed1.wav
+  artifactKey: Guid(e0e9c7014ff3b4236b653234552ce8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/annoyed1.wav using Guid(e0e9c7014ff3b4236b653234552ce8ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '543ceac4d1a2378a57b01821ca13a04c') in 0.395493 seconds
+  Import took 0.977450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Sounds/Orc/selected4.wav
+  artifactKey: Guid(335ca63061b174e9580b58bf9e9bc84a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Orc/selected4.wav using Guid(335ca63061b174e9580b58bf9e9bc84a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73396621b51b15c953767f30b2bc79bd') in 1.006871 seconds
+  Import took 1.494289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1162.551081 seconds.
+  path: Assets/Sounds/20210215 123359.m4a
+  artifactKey: Guid(3e05af08d14bc440ca5b7f585058e16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/20210215 123359.m4a using Guid(3e05af08d14bc440ca5b7f585058e16b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4baaf311d283824715e1daf60503ae54') in 0.777519 seconds
+  Import took 0.792058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.041920 seconds.
+  path: Assets/Sounds/Human
+  artifactKey: Guid(38c8053d2f711cd42883f49876b2e2f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human using Guid(38c8053d2f711cd42883f49876b2e2f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '288be3fc948a29ae460e637315bd69ac') in 0.090122 seconds
+  Import took 0.094223 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.039044 seconds.
+  path: Assets/Sounds/Human/acknowledge1.wav
+  artifactKey: Guid(11d6c1e4886ec47fea40e59e532ef29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/acknowledge1.wav using Guid(11d6c1e4886ec47fea40e59e532ef29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e638f5f3981ca02d240d1d90bce6e33e') in 0.921557 seconds
+  Import took 1.034887 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Sounds/Human/selected3.wav
+  artifactKey: Guid(0d8d3b36430cf4d50b24fbb6e29fb1ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/selected3.wav using Guid(0d8d3b36430cf4d50b24fbb6e29fb1ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef71056a0e24b83b6c40b91febea3f1d') in 0.191690 seconds
+  Import took 0.195873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Sounds/Human/help2.wav
+  artifactKey: Guid(42a5064a662c0411c8fe01eb2a67e762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/help2.wav using Guid(42a5064a662c0411c8fe01eb2a67e762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc75d2997ad67d79edef4a3800fe737c') in 0.302883 seconds
+  Import took 0.402230 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Sounds/Human/selected2.wav
+  artifactKey: Guid(f5425f99d69df4cb980b9eddf4410905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/selected2.wav using Guid(f5425f99d69df4cb980b9eddf4410905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f84500b84d34fd6ffd96b48992a59b69') in 0.545226 seconds
+  Import took 0.925906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000319 seconds.
+  path: Assets/Sounds/Human/help1.wav
+  artifactKey: Guid(a3edb5ab325e949cfaa6ab2714efa0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/help1.wav using Guid(a3edb5ab325e949cfaa6ab2714efa0b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eb43b7b0ab0dfcf36f4e12c94b076ed') in 0.506183 seconds
+  Import took 0.626492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Sounds/Human/acknowledge3.wav
+  artifactKey: Guid(2a038d89e478a41429cc0c039b63d5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/acknowledge3.wav using Guid(2a038d89e478a41429cc0c039b63d5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6af50f36e471922a6bf34ac10dcaa063') in 0.205191 seconds
+  Import took 0.209331 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Sounds/Human/selected5.wav
+  artifactKey: Guid(0d34fc58d4d934c90affab216fbf4861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/selected5.wav using Guid(0d34fc58d4d934c90affab216fbf4861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2049aea9a190d5db4ad9b90c6de7d8ca') in 0.271272 seconds
+  Import took 0.275162 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Sounds/Human/dead.wav
+  artifactKey: Guid(d505e4dd43f044353a8df1223f5dfefd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/dead.wav using Guid(d505e4dd43f044353a8df1223f5dfefd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c166a375511cafa0145b536d2433b265') in 0.472210 seconds
+  Import took 0.621043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Sounds/Human/acknowledge2.wav
+  artifactKey: Guid(5ff0f110849344bb0b2f78518fc225c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/acknowledge2.wav using Guid(5ff0f110849344bb0b2f78518fc225c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bf9c39bf993635163fbdef999455a6f') in 0.240817 seconds
+  Import took 0.470448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Sounds/Human/annoyed2.wav
+  artifactKey: Guid(17f68d85555874ef98829666c7ad080e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/annoyed2.wav using Guid(17f68d85555874ef98829666c7ad080e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba744b999c45583753354b7642fc655d') in 0.647511 seconds
+  Import took 0.751540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Sounds/Human/annoyed1.wav
+  artifactKey: Guid(2776b905940b84051a44c62ee2eb885f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/annoyed1.wav using Guid(2776b905940b84051a44c62ee2eb885f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '299855bc4ced41beee217815afaed569') in 0.151146 seconds
+  Import took 0.246598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Sounds/Human/selected1.wav
+  artifactKey: Guid(4b8134fc51b37463781fee040bac09ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/selected1.wav using Guid(4b8134fc51b37463781fee040bac09ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c93e66502e52700a5ae8c00feb332e0') in 0.310632 seconds
+  Import took 0.354834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000308 seconds.
+  path: Assets/Sounds/Human/selected4.wav
+  artifactKey: Guid(8dd72f0aa638d42df851b5dc733cd05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/selected4.wav using Guid(8dd72f0aa638d42df851b5dc733cd05b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d221581e08252cccf2948c25cfd7dea') in 0.121908 seconds
+  Import took 0.178675 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Sounds/Human/selected6.wav
+  artifactKey: Guid(3f614a96511694b168d73f9145f7cc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/selected6.wav using Guid(3f614a96511694b168d73f9145f7cc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '946ee2b4b7d9c971a7d5456bcc958770') in 0.275750 seconds
+  Import took 0.388445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Sounds/Human/acknowledge4.wav
+  artifactKey: Guid(531e4f7fc5f56449ea2222079f15e638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/Human/acknowledge4.wav using Guid(531e4f7fc5f56449ea2222079f15e638) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '078da04367b66ce9431ca66ee5ce40d8') in 0.224594 seconds
+  Import took 0.230049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7667.396296 seconds.
+  path: Assets/Sounds/20210215 123359 (online-audio-converter.com).mp3
+  artifactKey: Guid(b1388d3513b2740c3b03e6e9de1d878b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/20210215 123359 (online-audio-converter.com).mp3 using Guid(b1388d3513b2740c3b03e6e9de1d878b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d271da6b139b136401e4ff0e090e9b') in 5.233191 seconds
+  Import took 6.236945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 234.406851 seconds.
+  path: Assets/Sounds/20210215 123433-8DC3B054 (online-audio-converter.com).mp3
+  artifactKey: Guid(0f5fb3badd6674a1588eda5e887ba724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sounds/20210215 123433-8DC3B054 (online-audio-converter.com).mp3 using Guid(0f5fb3badd6674a1588eda5e887ba724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dd4caa77128ea415b57f46df26969a5') in 0.097246 seconds
+  Import took 0.252707 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.083498 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.684 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.3 MB.
+System memory in use after: 178.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2687.
+Total: 453.967410 ms (FindLiveObjects: 112.732780 ms CreateObjectMapping: 0.221335 ms MarkObjects: 340.970288 ms  DeleteObjects: 0.040643 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1539.581424 seconds.
+  path: Assets/Script/Ex03
+  artifactKey: Guid(6a4c42ef31a894f9f96a379df311a268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03 using Guid(6a4c42ef31a894f9f96a379df311a268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0851d5068c1c1ce027a6194535fae0bb') in 0.058390 seconds
+  Import took 0.123713 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.648494 seconds.
+  path: Assets/Script/Ex03/GetAttacked.cs
+  artifactKey: Guid(b138f71b338da45e795228dcf63fb597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/GetAttacked.cs using Guid(b138f71b338da45e795228dcf63fb597) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbfe4ebffd0fa4613a631b07a99a9ef4') in 0.066353 seconds
+  Import took 0.180145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.997044 seconds.
+  path: Assets/Script/Ex03/Orc
+  artifactKey: Guid(633f0f78e38d74cc18ef936cd178b407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc using Guid(633f0f78e38d74cc18ef936cd178b407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1734fd57a42d186fb989a0406c555af2') in 0.016401 seconds
+  Import took 0.090159 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.372086 seconds.
+  path: Assets/Script/Ex03/Orc/OrcSound.cs
+  artifactKey: Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/OrcSound.cs using Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd2ff707ce3ef08bedcc48c973563809') in 0.045058 seconds
+  Import took 0.165889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.412466 seconds.
+  path: Assets/Script/Ex03/Orc/OrcSpawner.cs
+  artifactKey: Guid(9ed416631ae364c9b92febc7045dc7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/OrcSpawner.cs using Guid(9ed416631ae364c9b92febc7045dc7f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4f9b9c63939565bec213671203dd223') in 0.033343 seconds
+  Import took 0.092411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.662981 seconds.
+  path: Assets/Script/Ex03/Orc/Orc.cs
+  artifactKey: Guid(1c09f69ddc2b4460b89d9f9fd77d5950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/Orc.cs using Guid(1c09f69ddc2b4460b89d9f9fd77d5950) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c1e30ab22b4ebbb0763add9772e188') in 0.001764 seconds
+  Import took 0.050631 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.022084 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.909 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.0 MB.
+System memory in use after: 179.1 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2689.
+Total: 2.444972 ms (FindLiveObjects: 0.265059 ms CreateObjectMapping: 0.082467 ms MarkObjects: 2.073521 ms  DeleteObjects: 0.022281 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.609279 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 1.05 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.475 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.5 MB.
+System memory in use after: 178.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2691.
+Total: 3.690294 ms (FindLiveObjects: 0.347260 ms CreateObjectMapping: 0.157489 ms MarkObjects: 3.163076 ms  DeleteObjects: 0.020654 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 535.920808 seconds.
+  path: Assets/Script/Ex03/Orc/OrcSound.cs
+  artifactKey: Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/OrcSound.cs using Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32560db2574be3384cd5a8a360aa7ae0') in 0.036108 seconds
+  Import took 0.173441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.366187 seconds.
+  path: Assets/Script/Ex03/Orc/OrcSound.cs
+  artifactKey: Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/OrcSound.cs using Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f46aab82b233341b19fc443605f9c096') in 0.001815 seconds
+  Import took 0.005761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.308209 seconds.
+  path: Assets/Script/Ex03/Orc/OrcSound.cs
+  artifactKey: Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/OrcSound.cs using Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f46aab82b233341b19fc443605f9c096') in 0.045450 seconds
+  Import took 0.112242 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000575 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.351 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.9 MB.
+System memory in use after: 179.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2693.
+Total: 3.235637 ms (FindLiveObjects: 0.507412 ms CreateObjectMapping: 0.716097 ms MarkObjects: 1.991530 ms  DeleteObjects: 0.019077 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001022 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.770 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.2 MB.
+System memory in use after: 179.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2695.
+Total: 2.587707 ms (FindLiveObjects: 0.261086 ms CreateObjectMapping: 0.126285 ms MarkObjects: 2.182091 ms  DeleteObjects: 0.016954 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 238.127197 seconds.
+  path: Assets/Script/Ex03/Orc/OrcSound.cs
+  artifactKey: Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script/Ex03/Orc/OrcSound.cs using Guid(024c136da6d61483da43ba2de1488030) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70d884d3514b5ec07a5d655c056429c2') in 0.175831 seconds
+  Import took 0.435848 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000714 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.228 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.5 MB.
+System memory in use after: 179.6 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2697.
+Total: 2.877543 ms (FindLiveObjects: 0.392109 ms CreateObjectMapping: 0.136783 ms MarkObjects: 2.325754 ms  DeleteObjects: 0.020259 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011121 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.264 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.58 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.9 MB.
+System memory in use after: 180.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2699.
+Total: 2.731842 ms (FindLiveObjects: 0.262077 ms CreateObjectMapping: 0.102742 ms MarkObjects: 2.346427 ms  DeleteObjects: 0.019086 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 255.183322 seconds.
+  path: Assets/Prefabs/orc.prefab
+  artifactKey: Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/orc.prefab using Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d266f4de0c505509a1de1e7df289041') in 1.537822 seconds
+  Import took 1.644174 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.121702 seconds.
+  path: Assets/Prefabs/Orc Building 4.prefab
+  artifactKey: Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Orc Building 4.prefab using Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c45dc1df9191619371b7e6023c3eed36') in 0.171711 seconds
+  Import took 0.282955 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000876 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.302 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.2 MB.
+System memory in use after: 180.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2702.
+Total: 2.580905 ms (FindLiveObjects: 0.262963 ms CreateObjectMapping: 0.078667 ms MarkObjects: 2.215883 ms  DeleteObjects: 0.021398 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 88.156555 seconds.
+  path: Assets/Prefabs/Orc Building 4.prefab
+  artifactKey: Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Orc Building 4.prefab using Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcea04245c6cea4628c0c3caf89912e9') in 0.079359 seconds
+  Import took 0.106181 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.025312 seconds.
+  path: Assets/Prefabs/Orc Building 4.prefab
+  artifactKey: Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Orc Building 4.prefab using Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcea04245c6cea4628c0c3caf89912e9') in 0.010159 seconds
+  Import took 0.014357 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.089134 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.925 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 179.7 MB.
+System memory in use after: 179.8 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2705.
+Total: 2.361573 ms (FindLiveObjects: 0.256933 ms CreateObjectMapping: 0.076066 ms MarkObjects: 2.009251 ms  DeleteObjects: 0.017681 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 110.586724 seconds.
+  path: Assets/Prefabs/orc.prefab
+  artifactKey: Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/orc.prefab using Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c250e431a5e463c5abbcbe7f0e92f092') in 0.196704 seconds
+  Import took 0.282733 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000653 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.675 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.1 MB.
+System memory in use after: 180.2 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2708.
+Total: 3.167304 ms (FindLiveObjects: 0.300510 ms CreateObjectMapping: 0.166358 ms MarkObjects: 2.681416 ms  DeleteObjects: 0.017586 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000690 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.463 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.4 MB.
+System memory in use after: 180.5 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2710.
+Total: 2.899985 ms (FindLiveObjects: 0.269685 ms CreateObjectMapping: 0.138547 ms MarkObjects: 2.469867 ms  DeleteObjects: 0.020512 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001081 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.667 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 180.9 MB.
+System memory in use after: 181.0 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2712.
+Total: 2.669420 ms (FindLiveObjects: 0.242289 ms CreateObjectMapping: 0.094276 ms MarkObjects: 2.312661 ms  DeleteObjects: 0.018972 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 244.794190 seconds.
+  path: Assets/Prefabs/Orc Building 4.prefab
+  artifactKey: Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Orc Building 4.prefab using Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92be5f0c1ca654d873fc5ca5dc038c9') in 0.539986 seconds
+  Import took 0.654035 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.119810 seconds.
+  path: Assets/Prefabs/Orc Building 4.prefab
+  artifactKey: Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Orc Building 4.prefab using Guid(54d3e440c793b43adadff3ac515c47d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b7eb053fdfba56d09ef282bb7c4f3bc') in 0.047271 seconds
+  Import took 0.092741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.440462 seconds.
+  path: Assets/Prefabs/orc.prefab
+  artifactKey: Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/orc.prefab using Guid(955b93aa31df447608432f3625e247c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd24634cdfea83aedf37bba7e5d06208d') in 0.099181 seconds
+  Import took 0.103793 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.103297 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.460 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 181.2 MB.
+System memory in use after: 181.3 MB.
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 2715.
+Total: 2.457493 ms (FindLiveObjects: 0.278044 ms CreateObjectMapping: 0.075869 ms MarkObjects: 2.082574 ms  DeleteObjects: 0.019615 ms)
+

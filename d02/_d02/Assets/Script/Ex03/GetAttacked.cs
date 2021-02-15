@@ -8,6 +8,8 @@ namespace ex03
         [SerializeField] private int hp;
         [SerializeField] private int currentObject;
         private Collider2D collider2d;
+        private SpriteRenderer spriteR;
+        [SerializeField] private Sprite  sprite;
         private float timer;
 
         public int HP
@@ -26,7 +28,7 @@ namespace ex03
 
         private void OnEnable()
         {
-            //Attack.instance.GetAttacked += Instance_GetAttacked;//someone explain that to me plzz
+            // Attack.instance.GetAttacked += Instance_GetAttacked;//someone explain that to me plzz
         }
 
         private void Start()
@@ -60,14 +62,20 @@ namespace ex03
                 {
                     HP = 0;
                     Attack.instance.GetAttacked -= Instance_GetAttacked;
-                    GetComponent<PlayerController>().IsDead(true);
-                    Destroy(collider2d);
                     switch (currentObject)
                     {
                         case 0:
+                            GetComponent<PlayerController>().IsDead(true);
                             OrcSound.instance.PlayDeadClip();
                             break;
+                        case 1:
+                            spriteR = GetComponent<SpriteRenderer>();
+                            OrcSound.instance.PlayCollapseClip();
+                            spriteR.sprite = sprite ;
+                            break;
                     }
+                    Destroy(collider2d);
+                
                 }
             }
         }
@@ -75,7 +83,7 @@ namespace ex03
 
         private void Update()
         {
-            if (HP == 0)
+            if (HP == 0 && currentObject == 0)
             {
                 timer += Time.deltaTime;
                 if (timer > 3f)

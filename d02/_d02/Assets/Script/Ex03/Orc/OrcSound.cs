@@ -7,6 +7,7 @@ namespace ex03
     {
         public static OrcSound instance { get; private set; }
         [SerializeField] private AudioClip died;
+        [SerializeField] private AudioClip buildingCollapse;
 
         private AudioSource source;
 
@@ -19,6 +20,12 @@ namespace ex03
         public void PlayDeadClip()
         {
             source.clip = died;
+            source.Play();
+        }
+
+        public void PlayCollapseClip()
+        {
+            source.clip = buildingCollapse;
             source.Play();
         }
 
