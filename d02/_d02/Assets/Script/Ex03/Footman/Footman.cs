@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 namespace ex03
@@ -15,7 +15,9 @@ namespace ex03
 
         private Vector3 footmanPos;
         private Vector3 enemyPos;
-        private float timing;
+        public float timing;
+
+
 
         private void Awake()
         {
@@ -38,23 +40,41 @@ namespace ex03
                     footmanPos = transform.position;
                     enemyPos = enemy.transform.position;
                     distBetweenTarget = Vector3.Distance(footmanPos, enemyPos);
-                    MoveTo(enemyPos);
+                   
                     //Debug.Log(enemy);
                     if (distBetweenTarget < 0.8)
                     {
-                        Vector3 enemySide = Vector3.Lerp(footmanPos, enemyPos, 0.2f);
+                        Vector3 enemySide = Vector3.Lerp(footmanPos, enemyPos, 0.1f);
                         MoveTo(enemySide);
-                        if (timing > 3f && enemy != null)
+                        timing += Time.deltaTime;
+                       
+                        GetComponent<PlayerController>().IsAttacking(true);
+                        if (timing > 1f && enemy != null)
                         {
+                            GetComponent<PlayerController>().IsAttacking(true);
                             timing = 0f;
                             Attack.instance.RaiseGetAttacked(enemy);
                         }
                     }
+                    else
+                    {
+                        MoveTo(enemyPos);
+                        timing = 0f;
+                        GetComponent<PlayerController>().IsAttacking(false);
+                    }
+
                 }
                 else
+                {
                     goAttack = false;
+                    GetComponent<PlayerController>().IsAttacking(false);
+                }
+           
+
             }
-            timing += Time.deltaTime;
+            else
+                GetComponent<PlayerController>().IsAttacking(false);
+
         }
 
         public  void    SetAttack(bool goAttack)

@@ -9,8 +9,10 @@ namespace ex03
         [SerializeField] private int currentObject;
         private Collider2D collider2d;
         private SpriteRenderer spriteR;
-        [SerializeField] private Sprite  sprite;
+        [SerializeField] private Sprite  buildingCollapseSprite;
         private float timer;
+        
+
 
         public int HP
         {
@@ -44,6 +46,9 @@ namespace ex03
                 case 1:
                     objectName = "Orc building";
                     break;
+                case 2:
+                    objectName = "Orc forum";
+                    break;
             }
         }
 
@@ -58,6 +63,7 @@ namespace ex03
             {
                 HP -= 10;
                 Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
+                
                 if (HP < 1)
                 {
                     HP = 0;
@@ -71,7 +77,14 @@ namespace ex03
                         case 1:
                             spriteR = GetComponent<SpriteRenderer>();
                             OrcSound.instance.PlayCollapseClip();
-                            spriteR.sprite = sprite ;
+                            spriteR.sprite = buildingCollapseSprite;
+                            break;
+                        case 2:
+                            spriteR = GetComponent<SpriteRenderer>();
+                            OrcSound.instance.PlayCollapseClip();
+                            spriteR.sprite = buildingCollapseSprite;
+                            Debug.Log("The Human Team wins.");
+                            Time.timeScale = 0;
                             break;
                     }
                     Destroy(collider2d);

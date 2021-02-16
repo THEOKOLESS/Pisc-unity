@@ -45,7 +45,10 @@ namespace ex03
                     footman.GetComponent<Footman>().SetAttack(true);
                     footman.GetComponent<Footman>().SetEnemy(attack);
                 }
-
+               
+                if (footman.GetComponent<Footman>().timing >= 0.9f) {
+                    footmanSound.PlayAttackClip();
+                }
             }
             else if (footmanSelectedList.Count > 0)
             {

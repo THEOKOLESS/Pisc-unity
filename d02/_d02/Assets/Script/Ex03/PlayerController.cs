@@ -12,6 +12,7 @@ namespace ex03
         public Animator animator;
 
         private bool died = false;
+        private bool attack = false;
 
         private Vector3 _moveDirNomalized;
 
@@ -25,7 +26,7 @@ namespace ex03
         // Update is called once per frame
         void Update()
         {
-            if (died == false)
+            if (died == false && attack == false)
             {
                 if (_moveDirNomalized.y >= 0.1 && dir == _xDirNormalized)
                 {
@@ -77,11 +78,17 @@ namespace ex03
                 _moveDir = (movePosition - transform.position);
                 GetComponent<SetMove>().SetMovePos(_moveDirNomalized);
             }
-            else
+            else if (died == true)
             {
                 GetComponent<SetMove>().SetMovePos(Vector3.zero);
                 SetDirection("stop");
                 animator.SetBool("dead", true);
+            }
+            else if (attack == true)
+            {
+                GetComponent<SetMove>().SetMovePos(Vector3.zero);
+                SetDirection("stop");
+                animator.SetBool("attack", true);
             }
         }
 
@@ -101,6 +108,10 @@ namespace ex03
             this.died = died;
         }
 
+        public  void IsAttacking(bool attack) 
+        {
+            this.attack = attack;
+        }
 
         public void SetDirection(string dir)
         {
@@ -112,6 +123,8 @@ namespace ex03
 
             animator.SetBool("moving_down", false);
             animator.SetBool("moving_down_side", false);
+
+            animator.SetBool("attack", false);
 
 
             switch (dir)

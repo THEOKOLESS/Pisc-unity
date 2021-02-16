@@ -378,3 +378,7 @@
 /Users/AbeyCultivey/Desktop/Pisc-unity/d02/ex00/obj/Debug/Assembly-CSharp.csproj.CopyComplete
 /Users/AbeyCultivey/Desktop/Pisc-unity/d02/ex00/obj/Debug/Assembly-CSharp.dll
 /Users/AbeyCultivey/Desktop/Pisc-unity/d02/ex00/obj/Debug/Assembly-CSharp.pdb
+/Users/AbeyCultivey/Desktop/Pisc-unity/d02/_d02/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/AbeyCultivey/Desktop/Pisc-unity/d02/_d02/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/AbeyCultivey/Desktop/Pisc-unity/d02/_d02/obj/Debug/Assembly-CSharp.dll
+/Users/AbeyCultivey/Desktop/Pisc-unity/d02/_d02/obj/Debug/Assembly-CSharp.pdb

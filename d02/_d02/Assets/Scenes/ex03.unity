@@ -463,7 +463,6 @@ GameObject:
   - component: {fileID: 560509961}
   - component: {fileID: 560509960}
   - component: {fileID: 560509962}
-  - component: {fileID: 560509959}
   m_Layer: 0
   m_Name: Human Forum
   m_TagString: Untagged
@@ -471,18 +470,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &560509959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560509958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d248f3f2d26814e6ea5808e0740bfd93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &560509960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -571,9 +558,10 @@ GameObject:
   m_Component:
   - component: {fileID: 693958469}
   - component: {fileID: 693958468}
-  - component: {fileID: 693958471}
   - component: {fileID: 693958470}
+  - component: {fileID: 693958471}
   - component: {fileID: 693958472}
+  - component: {fileID: 693958473}
   m_Layer: 9
   m_Name: Orc Forum
   m_TagString: Untagged
@@ -655,9 +643,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 693958467}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d248f3f2d26814e6ea5808e0740bfd93, type: 3}
+  m_Script: {fileID: 11500000, guid: b138f71b338da45e795228dcf63fb597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 2000
+  currentObject: 2
+  buildingCollapseSprite: {fileID: 21300008, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
 --- !u!114 &693958471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +662,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orc: {fileID: 989141301178085140, guid: 955b93aa31df447608432f3625e247c4, type: 3}
+  buildingList:
+  - {fileID: 1742981775}
+  - {fileID: 1095137765}
+  - {fileID: 972198804}
+  - {fileID: 1033881100}
 --- !u!61 &693958472
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -697,6 +693,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.047619, y: 3.047619}
   m_EdgeRadius: 0
+--- !u!82 &693958473
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693958467}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &868095127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +868,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300070, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: buildingCollapseSprite
+      value: 
+      objectReference: {fileID: 21300070, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4
@@ -837,12 +933,31 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300080, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: buildingCollapseSprite
+      value: 
+      objectReference: {fileID: 21300080, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+--- !u!61 &972198804 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+  m_PrefabInstance: {fileID: 1970733841}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1033881100 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+  m_PrefabInstance: {fileID: 1893990074}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1095137765 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+  m_PrefabInstance: {fileID: 911021143}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1139415505
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1097,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c8fcab8ce328045b352fcc4c2dec15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1742981775 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5470878102662301582, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+  m_PrefabInstance: {fileID: 868095127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1838615339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1150,6 +1270,10 @@ PrefabInstance:
       propertyPath: sprite
       value: 
       objectReference: {fileID: 21300028, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: buildingCollapseSprite
+      value: 
+      objectReference: {fileID: 21300028, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: m_Name
       value: Orc Building 4 (3)
@@ -1221,6 +1345,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
       propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300076, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
+    - target: {fileID: 5470878102662301583, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}
+      propertyPath: buildingCollapseSprite
       value: 
       objectReference: {fileID: 21300076, guid: 688756f0708394bf6aee9b0028a0ed8a, type: 3}
     - target: {fileID: 5470878102662301682, guid: 54d3e440c793b43adadff3ac515c47d9, type: 3}

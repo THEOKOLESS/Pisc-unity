@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedRing: {fileID: 4379343133899370510}
-  attack: {fileID: 0}
 --- !u!114 &4316915924440034381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,6 +139,9 @@ MonoBehaviour:
   _selected4: {fileID: 8300000, guid: 8dd72f0aa638d42df851b5dc733cd05b, type: 3}
   _selected5: {fileID: 8300000, guid: 0d34fc58d4d934c90affab216fbf4861, type: 3}
   _selected6: {fileID: 8300000, guid: 3f614a96511694b168d73f9145f7cc6e, type: 3}
+  _attack1: {fileID: 8300000, guid: d5dc164f191a24ed3a5513e6d0700d1d, type: 3}
+  _attack2: {fileID: 8300000, guid: c012bc2a47ea547e0af028bad2ca9ea5, type: 3}
+  _attack3: {fileID: 8300000, guid: 05a6dfc203ebe4c9fa500c6b9fa904b0, type: 3}
 --- !u!114 &5566410056271620740
 MonoBehaviour:
   m_ObjectHideFlags: 0
