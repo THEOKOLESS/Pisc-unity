@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7e3b65f627100419f98e4302e2b0ae9d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - died: {fileID: 8300000, guid: ecc6df5e38e6b4fcb93c0ba729d9e42d, type: 3}
+  - buildingCollapse: {fileID: 8300000, guid: 0f5fb3badd6674a1588eda5e887ba724, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
