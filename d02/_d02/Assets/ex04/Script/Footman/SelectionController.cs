@@ -52,10 +52,10 @@ namespace ex04
                     footman.SetEnemy(attack);
                 }
 
-                if (Footman.instance && Footman.instance.timing >= 0.9f)
-                {
-                    FootmanSound.instance.PlayAttackClip();
-                }
+                // if (Footman.instance && Footman.instance.timing >= 0.9f)
+                // {
+                //     FootmanSound.instance.PlayAttackClip();
+                // }
             }
             else if (footmanSelectedList.Count > 0)
             {
@@ -102,12 +102,12 @@ namespace ex04
                                     targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
                                 }
                             }
-                            FootmanSound.instance.PlayAcknowledgeClip();
+                            FootmanSelectAcknowledgeSound.instance.PlayAcknowledgeClip();
                         }
                     }
                     if (collider2d != null)
                     {
-                        FootmanSound.instance.PlaySelectedClip();
+                        FootmanSelectAcknowledgeSound.instance.PlaySelectedClip();
                         footmanSelectedList.Add(footman);
                         footman.SetSelectedVisible(true);
                     }

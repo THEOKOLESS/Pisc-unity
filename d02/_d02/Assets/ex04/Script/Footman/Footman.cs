@@ -81,6 +81,7 @@ namespace ex04
         }
         public  void DeleteFromSelection(){
             SelectionController.instance.footmanSelectedList.Remove(this);
+            Destroy(this);
         }
 
         public  void    SetAttack(bool goAttack)

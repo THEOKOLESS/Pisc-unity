@@ -58,10 +58,7 @@ namespace ex04
             {
                 _timer = 0f;
                 Instantiate(unit, transform.position, Quaternion.identity);
-                if(unit.name == "orc"){
-                    orc = unit.GetComponent<Orc>();
-                    OrcForum.instance.orcList.Add(orc);
-                }
+
             }
 
             _timer += Time.deltaTime;

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989141301178085142}
   - component: {fileID: 989141301178085141}
-  - component: {fileID: 7956707042524513704}
+  - component: {fileID: -8738440790002602949}
   - component: {fileID: 2303921214209360919}
   - component: {fileID: 1673375613968465104}
   - component: {fileID: 6715097450230295828}
@@ -91,7 +91,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7956707042524513704
+--- !u!114 &-8738440790002602949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timing: 0
   isOnTarget: 0
+  isForumAttacked: 0
   aggroRange: {fileID: 4674436162397717231}
 --- !u!114 &6715097450230295828
 MonoBehaviour:

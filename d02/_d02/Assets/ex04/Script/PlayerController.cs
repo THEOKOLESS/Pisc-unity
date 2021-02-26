@@ -94,6 +94,7 @@ namespace ex04
 
         public void SetMovePosition(Vector3 movePosition)
         {
+            if (this != null){
                 this.movePosition = movePosition;
                 this._moveDir = (movePosition - transform.position);
                 this._moveDirNomalized = this._moveDir.normalized;
@@ -101,6 +102,11 @@ namespace ex04
                 this.maxY = this._moveDirNomalized.y + 0.4f;
                 this._xDirNormalized = this._moveDirNomalized.x;
                 this.dir = Mathf.Clamp(this._xDirNormalized, this.minY, this.maxY);
+            }
+            else
+            {
+                Destroy(this);  
+            }
         }
 
         public void IsDead(bool died)

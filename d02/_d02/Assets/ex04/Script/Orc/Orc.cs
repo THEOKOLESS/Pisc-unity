@@ -13,7 +13,7 @@ namespace ex04
         private Vector3 _enemyPos;
         private float _distBetweenTarget;
         [HideInInspector] public float timing;
-        public bool isOnTarget;
+        [HideInInspector] public bool isOnTarget;
 
         public static Orc instance { get; private set; } // singleton
         [HideInInspector] public bool    isForumAttacked; 
@@ -61,10 +61,8 @@ namespace ex04
             Vector3 forumPos = orcForum.transform.position;
             float distBetweenTarget = Vector3.Distance(aIPos, forumPos);
             if(isIt == true){
-                Debug.Log("forum attacked");
-                
                 isOnTarget = false;
-                if (distBetweenTarget > 3f){
+                if (distBetweenTarget > 1f){
                     GetComponent<PlayerController>().IsAttacking(false);
                     MoveTo(Vector3.Lerp(aIPos, forumPos, 0.9f)); 
                     isForumAttacked = true; 
@@ -77,7 +75,6 @@ namespace ex04
             }
             else if (isIt == false)
             {
-                Debug.Log("forum safe");
                 isOnTarget = false;
                 isForumAttacked = false;
                 enemy = humanForum;
@@ -154,10 +151,7 @@ namespace ex04
             movePos.SetMovePosition(targetPos);
         }
 
-          public  void DeleteFromList(){
-            Debug.Log("orc just Died");
-            OrcForum.instance.orcList.Remove(this);
-        }
+
     }   
 }
 

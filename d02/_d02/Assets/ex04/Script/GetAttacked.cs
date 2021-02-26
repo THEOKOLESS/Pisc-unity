@@ -77,11 +77,19 @@ namespace ex04
             if (i == collider2d)
             {
                 HP -= 10;
-                // Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
-                if (currentObject == 2){
-                    OnTownAttack(true);
-                    // Orc.instance.IsForumAttacked(true);
+                Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
+                
+                switch(currentObject){
+                    case 0:
+                    case 1:
+                      FootmanAttackSound.instance.PlayAttackClip();
+                      break;
+                    case 2:
+                        OnTownAttack(true);
+                        break;
+          
                 }
+     
                 
                 if (HP < 1)
                 {
@@ -92,7 +100,6 @@ namespace ex04
                         case 0:
                             GetComponent<PlayerController>().IsDead(true);
                             OrcSound.instance.PlayDeadClip();
-                            GetComponent<Orc>().DeleteFromList();
                             break;
                         case 1:
                             spriteR = GetComponent<SpriteRenderer>();
@@ -137,12 +144,9 @@ namespace ex04
 
             if (currentObject ==  2 &&  Orc.instance != null)
             {
-                // Debug.LogFormat("hp max : {0} Hp {1}",hpMax,HP);
                 if(HP == hpMax){
                     timer += Time.deltaTime;
                     if(timer > 2f ){
-                        // Debug.Log("mon forum est n'est plus attaque");
-                        // Orc.instance.IsForumAttacked(false);
                           OnTownAttack(false);
                         timer = 0f;
                     }
