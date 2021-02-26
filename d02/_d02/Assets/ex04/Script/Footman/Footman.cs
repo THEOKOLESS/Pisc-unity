@@ -8,7 +8,7 @@ namespace ex04
         [SerializeField] private GameObject selectedRing;
         private PlayerController movePos;
 
-    
+        public static Footman  instance {get; private set;}
         private bool goAttack;
         private Collider2D enemy;
         private float distBetweenTarget;
@@ -23,7 +23,9 @@ namespace ex04
         {
             goAttack = false;
             movePos = GetComponent<PlayerController>();
-            SetSelectedVisible(false);          
+            SetSelectedVisible(false);    
+            if (instance == null)
+                instance = this;
         }
 
         private void OnEnable()
@@ -34,7 +36,7 @@ namespace ex04
 
         private void OnDisable()
         {
-            SelectionController.instance.footmanSelectedList.Remove(this);
+            // SelectionController.instance.footmanSelectedList.Remove(this);
         }
 
         private void Update()
@@ -53,7 +55,7 @@ namespace ex04
                         timing += Time.deltaTime;
                        
                         GetComponent<PlayerController>().IsAttacking(true);
-                        if (timing > 1f && enemy != null)
+                        if (timing >= 1f && enemy != null)
                         {
                             timing = 0f;
                             Attack.instance.RaiseGetAttacked(enemy);
@@ -76,6 +78,9 @@ namespace ex04
             else
                 GetComponent<PlayerController>().IsAttacking(false);
 
+        }
+        public  void DeleteFromSelection(){
+            SelectionController.instance.footmanSelectedList.Remove(this);
         }
 
         public  void    SetAttack(bool goAttack)

@@ -11,8 +11,12 @@ namespace ex04
         private SpriteRenderer spriteR;
         [SerializeField] private Sprite  buildingCollapseSprite;
         private float timer;
-        
 
+        public  static GetAttacked instance {get; private set;}
+
+        public delegate void VoidDelegateBool(bool isIt);
+        public event VoidDelegateBool OnTownAttack;
+    
 
         public int HP
         {
@@ -27,6 +31,11 @@ namespace ex04
         }
         private int hpMax;
         private string objectName;
+
+        private void    Awake(){
+            if (instance == null)
+                instance = this;
+        }
 
         private void OnEnable()
         {
@@ -68,7 +77,11 @@ namespace ex04
             if (i == collider2d)
             {
                 HP -= 10;
-                Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
+                // Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
+                if (currentObject == 2){
+                    OnTownAttack(true);
+                    // Orc.instance.IsForumAttacked(true);
+                }
                 
                 if (HP < 1)
                 {
@@ -79,6 +92,7 @@ namespace ex04
                         case 0:
                             GetComponent<PlayerController>().IsDead(true);
                             OrcSound.instance.PlayDeadClip();
+                            GetComponent<Orc>().DeleteFromList();
                             break;
                         case 1:
                             spriteR = GetComponent<SpriteRenderer>();
@@ -103,6 +117,7 @@ namespace ex04
                             GetComponent<PlayerController>().IsDead(true);
                             OrcSound.instance.PlayDeadClip();
                             GetComponent<Footman>().SetSelectedVisible(false);
+                            GetComponent<Footman>().DeleteFromSelection();
                             break;
                     }
                     Destroy(collider2d);
@@ -118,6 +133,25 @@ namespace ex04
                 timer += Time.deltaTime;
                 if (timer > 3f)
                     Destroy(gameObject);
+            }
+
+            if (currentObject ==  2 &&  Orc.instance != null)
+            {
+                // Debug.LogFormat("hp max : {0} Hp {1}",hpMax,HP);
+                if(HP == hpMax){
+                    timer += Time.deltaTime;
+                    if(timer > 2f ){
+                        // Debug.Log("mon forum est n'est plus attaque");
+                        // Orc.instance.IsForumAttacked(false);
+                          OnTownAttack(false);
+                        timer = 0f;
+                    }
+                }
+                else
+                {
+                    hpMax = hp;
+                    timer = 0f;
+                }
             }
         }
 

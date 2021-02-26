@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timing: 0
+  isOnTarget: 0
   aggroRange: {fileID: 4674436162397717231}
 --- !u!114 &6715097450230295828
 MonoBehaviour:
@@ -369,6 +370,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4005774159232428885, guid: 97beeb74e0a06455198d7df210c2e4e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5935411525071590207, guid: 97beeb74e0a06455198d7df210c2e4e5, type: 3}
+      propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8265714099573917790, guid: 97beeb74e0a06455198d7df210c2e4e5, type: 3}

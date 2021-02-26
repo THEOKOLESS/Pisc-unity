@@ -14,11 +14,9 @@ namespace ex04
         private Collider2D collider2d;
         private Collider2D attack;
         private Footman footman;
-        private FootmanSound footmanSound;
+        // private FootmanSound footmanSound;
 
         public static SelectionController instance { get; private set; }
-
-        public Attack footmanAttack;
 
         private List<Vector3> targetPositionList;
 
@@ -30,43 +28,43 @@ namespace ex04
         void Start()
         {
             footmanSelectedList = new List<Footman>();
+             Attack.instance.OnAttack += OnAttackLithener;
         }
 
 
 
         private void OnEnable()
         {
-            footmanAttack.OnAttack += OnAttackLithener;
+            //   Attack.instance.OnAttack += OnAttackLithener;
         }
         private void OnDisable()
         {
-            footmanAttack.OnAttack -= OnAttackLithener;
+              Attack.instance.OnAttack -= OnAttackLithener;
         }
         void OnAttackLithener()
         {
-       
-                if (attack != null && footmanSelectedList.Count > 0)
-                {
+            if (attack != null && footmanSelectedList.Count > 0)
+            {
 
-                    foreach (Footman footman in footmanSelectedList)
-                    {
-                        footman.GetComponent<Footman>().SetAttack(true);
-                        footman.GetComponent<Footman>().SetEnemy(attack);
-                    }
-
-                    if (footman.GetComponent<Footman>().timing >= 0.9f)
-                    {
-                        footmanSound.PlayAttackClip();
-                    }
-                }
-                else if (footmanSelectedList.Count > 0)
+                foreach (Footman footman in footmanSelectedList)
                 {
-                    foreach (Footman footman in footmanSelectedList)
-                    {
-                        footman.GetComponent<Footman>().SetAttack(false);
-                    }
+                    footman.SetAttack(true);
+                    footman.SetEnemy(attack);
                 }
-           
+
+                if (Footman.instance && Footman.instance.timing >= 0.9f)
+                {
+                    FootmanSound.instance.PlayAttackClip();
+                }
+            }
+            else if (footmanSelectedList.Count > 0)
+            {
+                foreach (Footman footman in footmanSelectedList)
+                {
+                        footman.SetAttack(false);
+                }
+            }
+        
         }
         // Update is called once per frame
         private void Update()
@@ -81,7 +79,7 @@ namespace ex04
                     if (collider2d != null)
                     {
                         footman = collider2d.GetComponent<Footman>();
-                        footmanSound = collider2d.GetComponent<FootmanSound>();
+                        // footmanSound = collider2d.GetComponent<FootmanSound>();
                     }
                     if (!Input.GetKey(KeyCode.LeftControl) && collider2d)
                     {
@@ -104,12 +102,12 @@ namespace ex04
                                     targetPositionListIndex = (targetPositionListIndex + 1) % targetPositionList.Count;
                                 }
                             }
-                            footmanSound.PlayAcknowledgeClip();
+                            FootmanSound.instance.PlayAcknowledgeClip();
                         }
                     }
                     if (collider2d != null)
                     {
-                        footmanSound.PlaySelectedClip();
+                        FootmanSound.instance.PlaySelectedClip();
                         footmanSelectedList.Add(footman);
                         footman.SetSelectedVisible(true);
                     }

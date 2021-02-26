@@ -22,6 +22,12 @@ namespace ex04
             GetAttacked?.Invoke(val);
         }
 
+        public void RaiseAiAttackForum(Collider2D val)
+        {
+            AiAttackForum?.Invoke(val);
+        }
+
+
         private void Awake()
         {
             if (instance == null)

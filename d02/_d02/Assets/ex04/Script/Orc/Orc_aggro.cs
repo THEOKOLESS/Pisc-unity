@@ -17,12 +17,16 @@ namespace ex04
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-
             if (collision.gameObject.layer != 6 && orc.GetComponent<Orc>().isOnTarget == false)
             {
                 orc.GetComponent<Orc>().SetEnemy(collision.gameObject.GetComponent<Collider2D>());
             }
-   
+        }
+        private void OnTriggerStay2D(Collider2D collision){
+             if (collision.gameObject.layer != 6 && orc.GetComponent<Orc>().isOnTarget == false)
+            {
+                orc.GetComponent<Orc>().SetEnemy(collision.gameObject.GetComponent<Collider2D>());
+            }
         }
     }
 }

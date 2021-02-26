@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1642838472146449291}
   - component: {fileID: 4461808477826091348}
+  - component: {fileID: 8240290737934120220}
   - component: {fileID: 1642838472146449290}
   - component: {fileID: 5274171195194954696}
   - component: {fileID: 8403081830979624163}
@@ -49,6 +50,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingCollapse: {fileID: 8300000, guid: 0f5fb3badd6674a1588eda5e887ba724, type: 3}
+--- !u!114 &8240290737934120220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642838472146449397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 026310bea044542f196565186d7407e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1642838472146449290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -112,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438c2f55bdef644b9bd69380c4d406fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orc: {fileID: 989141301178085140, guid: d4f9fc69b85b64f8f8d0ab2742edddf1, type: 3}
+  unit: {fileID: 0}
   buildingList:
   - {fileID: 0}
   - {fileID: 0}

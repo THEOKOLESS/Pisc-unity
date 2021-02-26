@@ -11,9 +11,13 @@ namespace ex04
         private float spawnControle;
         [SerializeField] private List<Collider2D> buildingList;
         private int colliderCount;
+        private Orc orc;
+
+        //  [HideInInspector]public List<Orc> orcList;
         
         private void Start()
         {
+            // orcList = new List<Orc>();
             _timer = 0f;
             spawnControle = 10f;
             colliderCount = 0;
@@ -54,9 +58,14 @@ namespace ex04
             {
                 _timer = 0f;
                 Instantiate(unit, transform.position, Quaternion.identity);
+                if(unit.name == "orc"){
+                    orc = unit.GetComponent<Orc>();
+                    OrcForum.instance.orcList.Add(orc);
+                }
             }
 
             _timer += Time.deltaTime;
+           
 
         }
     }
