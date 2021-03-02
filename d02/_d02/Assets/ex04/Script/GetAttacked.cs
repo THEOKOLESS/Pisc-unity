@@ -64,6 +64,9 @@ namespace ex04
                 case 4:
                     objectName = "Human unit";
                     break;
+                case 5:
+                    objectName = "Human building";
+                    break;
             }
         }
 
@@ -77,7 +80,8 @@ namespace ex04
             if (i == collider2d)
             {
                 HP -= 10;
-                Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
+                
+                // Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
                 
                 switch(currentObject){
                     case 0:
@@ -86,6 +90,7 @@ namespace ex04
                       break;
                     case 2:
                         OnTownAttack(true);
+                        HvOrcAttackedSound.instance.PlayHvOrcAttackedSound();
                         break;
           
                 }
@@ -99,9 +104,10 @@ namespace ex04
                     {
                         case 0:
                             GetComponent<PlayerController>().IsDead(true);
-                            OrcSound.instance.PlayDeadClip();
+                            DieSound.instance.PlayOrcDeadClip();
                             break;
                         case 1:
+                        case 5:
                             spriteR = GetComponent<SpriteRenderer>();
                             BuildingCollapseSound.instance.PlayCollapseClip();
                             spriteR.sprite = buildingCollapseSprite;
@@ -122,7 +128,7 @@ namespace ex04
                             break;
                         case 4:
                             GetComponent<PlayerController>().IsDead(true);
-                            OrcSound.instance.PlayDeadClip();
+                            DieSound.instance.PlayFootmanDeadClip();
                             GetComponent<Footman>().SetSelectedVisible(false);
                             GetComponent<Footman>().DeleteFromSelection();
                             break;

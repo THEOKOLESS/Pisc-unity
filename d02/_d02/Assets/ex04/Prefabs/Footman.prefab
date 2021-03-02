@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 989141301178085142}
   - component: {fileID: 989141301178085141}
+  - component: {fileID: 392757510307355118}
   - component: {fileID: 7095865726275830011}
   - component: {fileID: 8740469315753287269}
   - component: {fileID: 8788469012919004391}
@@ -90,6 +91,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &392757510307355118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989141301178085140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3b65f627100419f98e4302e2b0ae9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orcDied: {fileID: 8300000, guid: ecc6df5e38e6b4fcb93c0ba729d9e42d, type: 3}
+  HumanDied: {fileID: 8300000, guid: d505e4dd43f044353a8df1223f5dfefd, type: 3}
 --- !u!114 &7095865726275830011
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7e3b65f627100419f98e4302e2b0ae9d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - orcDied: {fileID: 8300000, guid: ecc6df5e38e6b4fcb93c0ba729d9e42d, type: 3}
+  - HumanDied: {fileID: 8300000, guid: d505e4dd43f044353a8df1223f5dfefd, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
