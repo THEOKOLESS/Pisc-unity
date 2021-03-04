@@ -69,7 +69,7 @@ namespace ex04
         // Update is called once per frame
         private void Update()
         {
-            Debug.Log(footmanSelectedList.Count);
+            // Debug.Log(footmanSelectedList.Count);
             if (Input.GetMouseButtonDown(0))
             {
                 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

@@ -36,7 +36,7 @@ namespace ex04
 
         private void OnDisable()
         {
-            // SelectionController.instance.footmanSelectedList.Remove(this);
+            DeleteFromSelection();
         }
 
         private void Update()
@@ -96,7 +96,8 @@ namespace ex04
 
         public void SetSelectedVisible(bool visible)
         {
-            selectedRing.SetActive(visible);
+            if(this != null)
+                selectedRing.SetActive(visible);
         }
 
         public void MoveTo(Vector3 targetPos)

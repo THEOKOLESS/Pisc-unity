@@ -36,7 +36,13 @@ namespace ex04
             if (audioSource != null && !audioSource.isPlaying)
                 audioSource.Play();
         }
-
+        
+        public void PlayOrcAttackClip()
+        {
+            audioSource.clip = _attack3;
+            if (audioSource != null && !audioSource.isPlaying)
+                audioSource.Play();
+        }
 
     }
 }

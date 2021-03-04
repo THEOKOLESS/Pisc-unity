@@ -8,9 +8,9 @@ namespace ex04{
     {
          public static HvOrcAttackedSound instance { get; private set; }
 
-          [SerializeField] private AudioClip hvOrcAttackedSound1;
-            [SerializeField] private AudioClip hvOrcAttackedSound2;
-           private AudioSource source;
+        [SerializeField] private AudioClip hvOrcAttackedSound1;
+        [SerializeField] private AudioClip hvOrcAttackedSound2;
+        private AudioSource source;
 
 
         private AudioClip[] _attackedArray;
@@ -28,10 +28,11 @@ namespace ex04{
             int index = Random.Range(0, _attackedArray.Length);
             shootClip = _attackedArray[index];
             source.clip = shootClip;
-            if (source != null){
+            if (source != null && !source.isPlaying){
                 source.Play();
             }
         }
+     
 
     }
 }

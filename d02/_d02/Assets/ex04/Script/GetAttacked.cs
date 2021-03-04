@@ -29,6 +29,7 @@ namespace ex04
                 hp = value;
             }
         }
+
         private int hpMax;
         private string objectName;
 
@@ -81,7 +82,7 @@ namespace ex04
             {
                 HP -= 10;
                 
-                // Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
+                Debug.LogFormat("{0} [{1} / {2}]HP has been attacked.", objectName, HP, hpMax);
                 
                 switch(currentObject){
                     case 0:
@@ -92,7 +93,13 @@ namespace ex04
                         OnTownAttack(true);
                         HvOrcAttackedSound.instance.PlayHvOrcAttackedSound();
                         break;
-          
+                    case 4:
+                    case 5:
+                        FootmanAttackSound.instance.PlayOrcAttackClip();
+                        break;
+                    case 3:
+                        HvFootmanAttackedSound.instance.PlayHvFootmanAttackedSound();
+                        break;
                 }
      
                 
@@ -127,9 +134,9 @@ namespace ex04
                             Time.timeScale = 0;
                             break;
                         case 4:
+                            GetComponent<Footman>().SetSelectedVisible(false);
                             GetComponent<PlayerController>().IsDead(true);
                             DieSound.instance.PlayFootmanDeadClip();
-                            GetComponent<Footman>().SetSelectedVisible(false);
                             GetComponent<Footman>().DeleteFromSelection();
                             break;
                     }
