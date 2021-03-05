@@ -1,0 +1,18 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.2.2f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+/Users/tvitoux/42/unity/Pisc-unity/d00/ex03
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+59920
+Successfully changed project path to: /Users/tvitoux/42/unity/Pisc-unity/d00/ex03
+/Users/tvitoux/42/unity/Pisc-unity/d00/ex03
+Using Asset Import Pipeline V2.

@@ -17,7 +17,7 @@ public class Bird : MonoBehaviour
         score = 0;
         gameOver = 0;
         weight = 3f;
-        flap = 100f;
+        flap = 75f;
     }
 
     // Update is called once per frame
