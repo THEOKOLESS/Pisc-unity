@@ -13,11 +13,16 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     [SerializeField] private GameObject tower;
 
     private RectTransform m_DraggingPlane;
-    public bool dragOnSurfaces = true;
+    [HideInInspector]public bool dragOnSurfaces = true;
+    private Image towerImg;
+    private int energyCost;
+  
+
     //private CanvasGroup canvasGroup;
-    private void Awake()
+    private void Start()
     {
-        //canvasGroup = GetComponent<CanvasGroup>();
+        energyCost = tower.GetComponent<towerScript>().energy;
+       towerImg = gameObject.GetComponent<Image>();
     }
     static public T FindInParents<T>(GameObject gameObject) where T : Component
     {
@@ -35,32 +40,41 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         }
         return comp;
     }
+    private void Update()
+    {
 
+        if(energyCost > gameManager.gm.playerEnergy)
+        {
+            towerImg.color = Color.red;
+        }
+        else
+            towerImg.color = Color.white;
+    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         canvas2 = FindInParents<Canvas>(gameObject);
         if (canvas2 == null) {
-            Debug.Log("No canvas ");
+            Debug.Log("No canvas");
             return;
         }
-        m_DraggingIcon = new GameObject("icon");
-        m_DraggingIcon.transform.SetParent(canvas2.transform, false);
-        m_DraggingIcon.transform.SetAsLastSibling();
-        var image = m_DraggingIcon.AddComponent<Image>();
+        if (towerImg.color == Color.white)
+        {
+            m_DraggingIcon = new GameObject("icon");
+            m_DraggingIcon.transform.SetParent(canvas2.transform, false);
+            m_DraggingIcon.transform.SetAsLastSibling();
+            var image = m_DraggingIcon.AddComponent<Image>();
 
-        image.sprite = towerSprite;
+            image.sprite = towerSprite;
 
-        image.rectTransform.sizeDelta = new Vector2(20, 20);
-  
-        if (dragOnSurfaces)
-            m_DraggingPlane = transform as RectTransform;
-        else
-            m_DraggingPlane = canvas2.transform as RectTransform;
+            image.rectTransform.sizeDelta = new Vector2(20, 20);
 
-        SetDraggedPosition(eventData);
-        //Debug.Log(rectTransform.anchoredPosition);
-        //Instantiate(m_DraggingIcon, Camera.main.ScreenToWorldPoint(Input.mousePosition), Quaternion.identity);
-        //canvasGroup.blocksRaycasts = false;
+            if (dragOnSurfaces)
+                m_DraggingPlane = transform as RectTransform;
+            else
+                m_DraggingPlane = canvas2.transform as RectTransform;
+
+            SetDraggedPosition(eventData);
+        }
     }
     private void SetDraggedPosition(PointerEventData data)
     {
@@ -80,21 +94,47 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         //rectTransform.anchoredPosition += eventData.delta;
         //m_DraggingIcon.transform.localPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (m_DraggingIcon != null)
+        {
             SetDraggedPosition(eventData);
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+            var img = m_DraggingIcon.GetComponent<Image>();
+            var isTower = false;
+            if (hit)
+            {
+                RaycastHit2D[] hitArray = Physics2D.RaycastAll(hit.collider.gameObject.transform.position, Vector2.zero);
+                if (hitArray[0])
+                {
+                    foreach (RaycastHit2D ray in hitArray)
+                    {
+                        if (ray.collider.gameObject.CompareTag("tower"))
+                            isTower = true;
+                    }
+                }
+            }
+            else
+                isTower = true;
+
+            if (isTower)
+                img.color = Color.red;
+            else
+                img.color = Color.white;
+        }
     }
+
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (m_DraggingIcon != null)
-            Destroy(m_DraggingIcon);
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
-        if (hit)
         {
-            Debug.Log(hit.collider.gameObject.name);
-            if (hit.collider.gameObject.name != "turret_tile" && hit.collider.gameObject.name != "emptyA_0")
-                Instantiate(tower, hit.collider.gameObject.transform.position, Quaternion.identity);
-            else
-                Debug.Log("a turret is already placed here");
+            var img = m_DraggingIcon.GetComponent<Image>();
+            if (img.color != Color.red)
+            {
+                RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+                gameManager.gm.playerEnergy -= energyCost;
+                if (gameManager.gm.playerEnergy > 0) 
+                    Instantiate(tower, hit.collider.gameObject.transform.position, Quaternion.identity);
+            }
+            Destroy(m_DraggingIcon);
         }
     }
      public  void    OnPointerDown(PointerEventData eventData)
@@ -103,15 +143,7 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     }
 
     // Update is called once per frame
-    void Update()
-    {
- 
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);    
-        //}
-    }
 
     public void OnDrop(PointerEventData eventData)
     {
