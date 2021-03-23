@@ -91,8 +91,6 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     }
     public void OnDrag(PointerEventData eventData)
     {
-        //rectTransform.anchoredPosition += eventData.delta;
-        //m_DraggingIcon.transform.localPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         if (m_DraggingIcon != null)
         {
             SetDraggedPosition(eventData);
@@ -101,6 +99,7 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
             var isTower = false;
             if (hit)
             {
+                Collider2D collHit = Physics2D.OverlapPoint(hit.collider.gameObject.transform.position, LayerMask.GetMask("tower"));
                 RaycastHit2D[] hitArray = Physics2D.RaycastAll(hit.collider.gameObject.transform.position, Vector2.zero);
                 if (hitArray[0])
                 {
@@ -110,6 +109,8 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                             isTower = true;
                     }
                 }
+                if(collHit)
+                    isTower = true;
             }
             else
                 isTower = true;
@@ -127,14 +128,16 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
         if (m_DraggingIcon != null)
         {
             var img = m_DraggingIcon.GetComponent<Image>();
+            Destroy(m_DraggingIcon);
             if (img.color != Color.red)
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                 gameManager.gm.playerEnergy -= energyCost;
+        
                 if (gameManager.gm.playerEnergy > 0) 
                     Instantiate(tower, hit.collider.gameObject.transform.position, Quaternion.identity);
             }
-            Destroy(m_DraggingIcon);
+           
         }
     }
      public  void    OnPointerDown(PointerEventData eventData)
