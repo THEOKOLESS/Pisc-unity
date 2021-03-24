@@ -105,7 +105,7 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
                 {
                     foreach (RaycastHit2D ray in hitArray)
                     {
-                        if (ray.collider.gameObject.CompareTag("tower"))
+                        if (ray.collider.gameObject.CompareTag("tower") || ray.collider.gameObject.layer == LayerMask.NameToLayer("bots"))
                             isTower = true;
                     }
                 }
@@ -133,7 +133,6 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
             {
                 RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
                 gameManager.gm.playerEnergy -= energyCost;
-        
                 if (gameManager.gm.playerEnergy > 0) 
                     Instantiate(tower, hit.collider.gameObject.transform.position, Quaternion.identity);
             }

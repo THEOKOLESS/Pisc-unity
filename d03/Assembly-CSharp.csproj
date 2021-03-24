@@ -57,6 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\gameManager.cs" />
+    <Compile Include="Assets\ex02\Script\MenuPause.cs" />
+    <Compile Include="Assets\ex01\Script\TowerInfo.cs" />
     <Compile Include="Assets\Scripts\rocketScript.cs" />
     <Compile Include="Assets\Scripts\ennemySpawner.cs" />
     <Compile Include="Assets\Scripts\visualPathSpawner.cs" />
@@ -71,7 +73,7 @@
     <Compile Include="Assets\Scripts\gatlingImpactScript.cs" />
     <Compile Include="Assets\Scripts\checkpoint.cs" />
     <Compile Include="Assets\Scripts\visualPathCheckpoint.cs" />
-    <Compile Include="Assets\ex01\Script\TowerInfo.cs" />
+    <Compile Include="Assets\ex02\Script\SpeedManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
