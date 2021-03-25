@@ -7,14 +7,11 @@ using TMPro;
 
 public class DisplayInfo : MonoBehaviour
 {
-    //[SerializeField] private GameObject textHP;
+   
     [SerializeField] TextMeshProUGUI textHP;
     [SerializeField] TextMeshProUGUI textEnergy;
 
-    //[SerializeField] private GameObject textEnergy; // Start is called before the first frame update
-
-
-    // Update is called once per frame
+  
     void Update()
     {
         textHP.SetText(gameManager.gm.playerHp + "");

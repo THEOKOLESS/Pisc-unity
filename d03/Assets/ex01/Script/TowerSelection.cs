@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler {
+public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
 
 
     private Canvas canvas2;
@@ -21,7 +21,7 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     //private CanvasGroup canvasGroup;
     private void Start()
     {
-        energyCost = tower.GetComponent<towerScript>().energy;
+       energyCost = tower.GetComponent<towerScript>().energy;
        towerImg = gameObject.GetComponent<Image>();
     }
     static public T FindInParents<T>(GameObject gameObject) where T : Component
@@ -147,8 +147,5 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IBeginDragHand
     // Update is called once per frame
 
 
-    public void OnDrop(PointerEventData eventData)
-    {
-        Debug.Log("on drop");
-    }
+
 }
