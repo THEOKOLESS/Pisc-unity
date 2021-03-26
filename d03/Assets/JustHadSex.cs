@@ -10,29 +10,83 @@ public class JustHadSex : MonoBehaviour
     public GameObject SexMenuUI;
     public GameObject AreyousureUI;
     public GameObject BravoUI;
+    public GameObject SetDayzUI;
 
     [SerializeField] TextMeshProUGUI label;
     private static System.DateTime startDate;
     private static System.DateTime today;
+    [SerializeField]  TMP_InputField inputField;
     void Start()
     {
-        SetStartDate();
+        SetStartDate(-1);
+        inputField.characterValidation = TMP_InputField.CharacterValidation.Integer;
+        inputField.characterLimit = 5;
     }
 
-    void SetStartDate()
+    public void SetNumberOfDays()
     {
-        if (PlayerPrefs.HasKey("DateInitialized")) //if we have the start date saved, we'll use that
-            startDate = System.Convert.ToDateTime(PlayerPrefs.GetString("DateInitialized"));
-        else //otherwise...
+        if(inputField.text != "")
         {
-            startDate = System.DateTime.Now; //save the start date ->
+            int date = int.Parse(inputField.text);
+          //  Debug.Log(date);
+            if (date < 0)
+                date *= -1;   
+            SetStartDate((date * -1 ) + 1);
+        }
+
+        SexMenuUI.GetComponent<CanvasGroup>().alpha = 1f;
+        SexMenuUI.GetComponent<CanvasGroup>().interactable = true;
+        SexMenuUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+        SetDayzUI.GetComponent<CanvasGroup>().alpha = 0f;
+        SetDayzUI.GetComponent<CanvasGroup>().interactable = false;
+        SetDayzUI.GetComponent<CanvasGroup>().blocksRaycasts = false;
+    }
+    public  void IneedToSetUPDayz()
+    {
+        SetDayzUI.GetComponent<CanvasGroup>().alpha = 1f;
+        SetDayzUI.GetComponent<CanvasGroup>().interactable = true;
+        SetDayzUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+        SexMenuUI.GetComponent<CanvasGroup>().alpha = 0f;
+        SexMenuUI.GetComponent<CanvasGroup>().interactable = false;
+        SexMenuUI.GetComponent<CanvasGroup>().blocksRaycasts = false;
+    }
+
+    public void IJustMissclicked()
+    {
+        SexMenuUI.GetComponent<CanvasGroup>().alpha = 1f;
+        SexMenuUI.GetComponent<CanvasGroup>().interactable = true;
+        SexMenuUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+        SetDayzUI.GetComponent<CanvasGroup>().alpha = 0f;
+        SetDayzUI.GetComponent<CanvasGroup>().interactable = false;
+        SetDayzUI.GetComponent<CanvasGroup>().blocksRaycasts = false;
+    }
+    void SetStartDate(int dayz)
+    {
+        if (dayz == -1)
+        {
+            if (PlayerPrefs.HasKey("DateInitialized")) //if we have the start date saved, we'll use that
+                startDate = System.Convert.ToDateTime(PlayerPrefs.GetString("DateInitialized"));
+            else //otherwise...
+            {
+                startDate = System.DateTime.Today; //save the start date ->
+                PlayerPrefs.SetString("DateInitialized", startDate.ToString());
+            }
+        }
+        else
+        {
+            startDate = System.DateTime.Today.AddDays(dayz); //save the start date ->
             PlayerPrefs.SetString("DateInitialized", startDate.ToString());
         }
     }
 
+ 
+
     private void Update()
     {
-        label.text = ("Days Passed : " + GetDaysPassed());
+        label.text = ("Days Passed since my last time : " + GetDaysPassed());
     }
     public static string GetDaysPassed()
     {
@@ -75,6 +129,8 @@ public class JustHadSex : MonoBehaviour
         BravoUI.GetComponent<CanvasGroup>().alpha = 1f;
         BravoUI.GetComponent<CanvasGroup>().interactable = true;
         BravoUI.GetComponent<CanvasGroup>().blocksRaycasts = true;
+        SetStartDate(1);
+  
     }
 
     public void Thanks()
